@@ -20,13 +20,13 @@ export class ProductPage {
                     <div class="max-w-6xl mx-auto">
                         <div class="text-center mb-16">
                             <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
-                                Your CCTV sees it all. Glancio makes it actionable.
+                                Your CCTV sees it all. glancio makes it actionable.
                             </h1>
                             <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                                Glancio turns your existing camera network into a powerful behavioural insight engine — tracking real customer journeys, segmenting foot traffic, and revealing how your space actually performs.
+                                glancio turns your existing camera network into a powerful behavioural insight engine — tracking real customer journeys, segmenting foot traffic, and revealing how your space actually performs.
                             </p>
                             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                                From heatmaps to segmentation to live alerts, Glancio helps you understand how people move, where they pause, and what drives engagement — without any extra hardware.
+                                From heatmaps to segmentation to live alerts, glancio helps you understand how people move, where they pause, and what drives engagement — without any extra hardware.
                             </p>
                         </div>
 
@@ -38,7 +38,7 @@ export class ProductPage {
                                         Multi-camera tracking. Real-world insight.
                                     </h2>
                                     <p class="text-lg text-gray-600 mb-6">
-                                        See complete customer journeys across your store. With Glancio's intelligent multi-camera stitching, shopper paths are automatically tracked and visualised — even as they move between camera zones.
+                                        See complete customer journeys across your store. With glancio's intelligent multi-camera stitching, shopper paths are automatically tracked and visualised — even as they move between camera zones.
                                     </p>
                                     <p class="text-gray-600">
                                         Whether you're spotting a dead zone or evaluating layout changes, get a full view of how your space influences customer movement and behaviour.
@@ -55,8 +55,8 @@ export class ProductPage {
                             <div class="grid lg:grid-cols-2 gap-12 items-center">
                                 <div class="order-2 lg:order-1">
                                     <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                                        <div class="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                                            <div class="text-6xl">👥</div>
+                                        <div class="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center overflow-hidden">
+                                            <img src="/images/segment.png" alt="Customer segmentation analytics" class="w-full h-full object-contain rounded-xl">
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@ export class ProductPage {
                                         Heatmaps and alerting that help you act. Identify underused areas, spot high-traffic choke points, and respond quickly to unusual movement patterns.
                                     </p>
                                     <p class="text-gray-600">
-                                        With built-in alerts and a simple interface, Glancio turns complex behaviour data into store-friendly insights you can act on today.
+                                        With built-in alerts and a simple interface, glancio turns complex behaviour data into store-friendly insights you can act on today.
                                     </p>
                                 </div>
                                 <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -100,11 +100,11 @@ export class ProductPage {
                                 </h2>
                                 <div class="flex items-center justify-center mb-6">
                                     <div class="bg-gray-50 rounded-lg p-4">
-                                        <img src="/images/app-logo.png" alt="Australian Privacy Principles Compliant" class="h-12 w-auto">
+                                        <div class="text-2xl font-bold text-blue-600">APP</div>
                                     </div>
                                 </div>
                                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                                    Glancio is built with compliance and business practicality in mind. All footage is processed securely and locally, with no cloud uploads or third-party sharing. Our platform complies with Australia's Privacy Act and the Australian Privacy Principles (APPs).
+                                    glancio is built with compliance and business practicality in mind. All footage is processed securely and locally, with no cloud uploads or third-party sharing. Our platform complies with Australia's Privacy Act and the Australian Privacy Principles (APPs).
                                 </p>
                             </div>
                         </div>

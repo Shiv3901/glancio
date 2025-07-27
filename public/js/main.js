@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     demoButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Redirect to enquiry page
-            window.location.href = '/demo';
+            window.location.href = '/enquiry';
         });
     });
 

@@ -26,21 +26,24 @@ export class HomePage {
                             for better retail performance
                         </h1>
                         <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                            Glancio stitches together every customer journey across every camera — 
+                            glancio stitches together every customer journey across every camera — 
                             transforming footage into always-on, AI-powered retail intelligence.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/demo" class="btn btn-primary btn-large">Get enquiry</a>
+                            <a href="/enquiry" class="btn btn-primary btn-large">Get enquiry</a>
                         </div>
                     </div>
                     <div class="mt-20">
                         <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                             <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="text-6xl mb-4">🎥</div>
-                                    <h3 class="text-xl font-semibold text-white mb-2">Demo Video</h3>
-                                    <p class="text-gray-300">Watch how Glancio transforms your retail analytics</p>
-                                </div>
+                                <iframe 
+                                    class="w-full h-full rounded-xl"
+                                    src="https://www.youtube.com/embed/YMHt_FxReqw" 
+                                    title="Glancio Demo Video"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
                     </div>
@@ -55,7 +58,7 @@ export class HomePage {
                 <div class="container">
                     <div class="text-center mb-16">
                         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Glancio helps physical retailers see what truly drives performance
+                            glancio helps physical retailers see what truly drives performance
                         </h2>
                         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                             Understand how people move, shop, and engage — then act on it.
@@ -115,7 +118,7 @@ export class HomePage {
                                 </li>
                             </ul>
                             <div class="mt-8">
-                                <a href="/demo" class="btn btn-primary">Get enquiry</a>
+                                <a href="/enquiry" class="btn btn-primary">Get enquiry</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +156,7 @@ export class HomePage {
                                     <span>Get alerts when something's off — fast</span>
                                 </li>
                             </ul>
-                            <a href="/demo" class="btn btn-primary">Get enquiry</a>
+                            <a href="/enquiry" class="btn btn-primary">Get enquiry</a>
                         </div>
                         <div class="feature-visual">
                             <div class="protection-blob">
@@ -182,7 +185,7 @@ export class HomePage {
                             Built for business. Compliant by design.
                         </h2>
                         <p class="text-xl text-gray-300 mb-16">
-                            Glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.
+                            glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.
                         </p>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="text-center">
@@ -197,10 +200,10 @@ export class HomePage {
                             </div>
                             <div class="text-center">
                                 <div class="bg-white rounded-lg p-4 mb-4 inline-block">
-                                    <img src="/images/app-logo.png" alt="Australian Privacy Principles Compliant" class="h-12 w-auto mx-auto">
+                                    <div class="text-2xl font-bold text-blue-600">APP</div>
                                 </div>
                                 <h3 class="text-xl font-semibold text-white mb-3">APP-compliant</h3>
-                                <p class="text-gray-300">Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
+                                <p class="text-gray-300">glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
                             </div>
                         </div>
                     </div>

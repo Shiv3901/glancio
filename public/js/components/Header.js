@@ -12,7 +12,6 @@ export class Header {
                     </nav>
                     <div class="flex gap-4">
                         <a href="/" class="btn btn-secondary">Home</a>
-                        <button class="btn btn-primary">Contact us</button>
                     </div>
                 </div>
             </header>

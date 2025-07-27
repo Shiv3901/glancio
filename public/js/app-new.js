@@ -1,13 +1,13 @@
-// Glancio App - Modular Architecture
+// glancio App - Modular Architecture
 import { HomePage } from './pages/Home.js';
 import { AboutPage } from './pages/About.js';
 import { ContactPage } from './pages/Contact.js';
-import { DemoPage } from './pages/Demo.js';
+import { EnquiryPage } from './pages/Enquiry.js';
 import { PrivacyPage } from './pages/Privacy.js';
 import { TermsPage } from './pages/Terms.js';
 import { ProductPage } from './pages/Product.js';
 
-class GlancioApp {
+class glancioApp {
     constructor() {
         this.app = document.getElementById('app');
         this.currentPage = this.getCurrentPage();
@@ -19,7 +19,7 @@ class GlancioApp {
         if (path === '/' || path === '/index.html') return 'home';
         if (path === '/about') return 'about';
         if (path === '/contact') return 'contact';
-        if (path === '/demo') return 'demo';
+        if (path === '/enquiry') return 'enquiry';
         if (path === '/privacy') return 'privacy';
         if (path === '/terms') return 'terms';
         if (path === '/product') return 'product';
@@ -51,8 +51,8 @@ class GlancioApp {
                 return AboutPage.render();
             case 'contact':
                 return ContactPage.render();
-            case 'demo':
-                return DemoPage.render();
+            case 'enquiry':
+                return EnquiryPage.render();
             case 'privacy':
                 return PrivacyPage.render();
             case 'terms':
@@ -72,7 +72,7 @@ class GlancioApp {
                 const buttonText = e.target.textContent.toLowerCase();
                 
                 if (buttonText.includes('enquiry') || buttonText.includes('demo')) {
-                    this.navigateTo('/demo');
+                    this.navigateTo('/enquiry');
                 } else if (buttonText.includes('contact')) {
                     this.navigateTo('/contact');
                 } else if (buttonText.includes('about')) {
@@ -102,7 +102,7 @@ class GlancioApp {
                 const buttonText = e.target.textContent.toLowerCase();
                 
                 if (buttonText.includes('enquiry') || buttonText.includes('demo')) {
-                    this.navigateTo('/demo');
+                    this.navigateTo('/enquiry');
                 } else if (buttonText.includes('contact')) {
                     this.navigateTo('/contact');
                 }
@@ -192,7 +192,7 @@ class GlancioApp {
 
     loadPageScripts() {
         // Load page-specific scripts dynamically
-        if (this.currentPage === 'demo') {
+        if (this.currentPage === 'enquiry') {
             this.loadGoogleFormsScript();
         }
     }
@@ -210,7 +210,7 @@ class GlancioApp {
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new GlancioApp();
+    new glancioApp();
 });
 
 // Handle browser back/forward buttons

@@ -49,27 +49,23 @@ export class AboutPage {
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="text-center">
                                     <img src="/images/harry.png" alt="Harry Bligh" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Harry Bligh</h3>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Harry Bligh <a href="https://www.linkedin.com/in/harrybligh/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300 text-2xl ml-2">💼</a></h3>
                                     <p class="text-gray-600 mb-3">Go-To-Market</p>
-                                    <a href="https://www.linkedin.com/in/harrybligh/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">LinkedIn</a>
                                 </div>
                                 <div class="text-center">
                                     <img src="/images/shiv.png" alt="Shivam Savani" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Shivam Savani</h3>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Shivam Savani <a href="https://www.linkedin.com/in/shivam-savani/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300 text-2xl ml-2">💼</a></h3>
                                     <p class="text-gray-600 mb-3">Product & Design</p>
-                                    <a href="https://www.linkedin.com/in/shivam-savani/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">LinkedIn</a>
                                 </div>
                                 <div class="text-center">
                                     <img src="/images/vik.png" alt="Vikhyat Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Vikhyat Sharma</h3>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Vikhyat Sharma <a href="https://www.linkedin.com/in/vikhyatsharma43/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300 text-2xl ml-2">💼</a></h3>
                                     <p class="text-gray-600 mb-3">Software Engineering</p>
-                                    <a href="https://www.linkedin.com/in/vikhyatsharma43/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">LinkedIn</a>
                                 </div>
                                 <div class="text-center">
                                     <img src="/images/declan.png" alt="Declan Curran" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Declan Curran</h3>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Declan Curran <a href="https://www.linkedin.com/in/declan-curran/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300 text-2xl ml-2">💼</a></h3>
                                     <p class="text-gray-600 mb-3">AI & Machine Learning</p>
-                                    <a href="https://www.linkedin.com/in/declan-curran/" target="_blank" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">LinkedIn</a>
                                 </div>
                             </div>
                         </div>
