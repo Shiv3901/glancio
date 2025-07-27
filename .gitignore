@@ -102,7 +102,6 @@ coverage
 *.lcov
 
 # Compiled CSS
-public/styles/main.css
 public/styles/main.css.map
 
 # OS generated files
