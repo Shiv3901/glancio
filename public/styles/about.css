@@ -1,0 +1,93 @@
+/* About Page Specific Styles */
+.team-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member-link {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-link h3 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.team-role {
+    color: #145DA2;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-member-link a {
+    color: #145DA2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 14px;
+}
+
+.team-member-link a:hover {
+    color: #1E88E5;
+}
+
+.member-photo {
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e9ecef;
+    margin: 0 auto;
+    display: block;
+    transition: border-color 0.3s ease;
+}
+
+.team-member-link:hover .team-photo {
+    border-color: #145DA2;
+}
+
+@media (max-width: 768px) {
+    .team-links {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .team-member-link {
+        padding: 25px;
+    }
+    
+    .team-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .team-member-link h3 {
+        font-size: 18px;
+    }
+    
+    .team-role {
+        font-size: 13px;
+    }
+} 
