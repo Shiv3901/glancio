@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > 100) {
-            header.style.backgroundColor = 'rgba(45, 55, 72, 0.95)';
+            header.style.backgroundColor = 'rgba(89, 89, 89, 0.95)';
         } else {
-            header.style.backgroundColor = '#2d3748';
+            header.style.backgroundColor = '#595959';
         }
         
         lastScrollTop = scrollTop;

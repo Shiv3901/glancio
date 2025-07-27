@@ -1,11 +1,11 @@
 @use 'sass:color';
 
-// Variables - Lighter Canva-inspired gray and blue color scheme
-$primary-bg: #2d3748;
-$secondary-bg: #4a5568;
-$accent-blue: #4f46e5;
-$accent-cyan: #06b6d4;
-$accent-indigo: #6366f1;
+// Variables - Updated color scheme with specific blue and grey
+$primary-bg: #595959;
+$secondary-bg: #404040;
+$accent-blue: #145DA2;
+$accent-cyan: #1E88E5;
+$accent-indigo: #1976D2;
 $text-white: #ffffff;
 $text-light: #f8fafc;
 $text-muted: #e2e8f0;
@@ -111,12 +111,12 @@ body {
   @include button-base;
 
   &.btn-primary {
-    background-color: $text-white;
-    color: $primary-bg;
+    background-color: $accent-blue;
+    color: $text-white;
     font-weight: 600;
 
     &:hover {
-      background-color: color.adjust($text-white, $lightness: -10%);
+      background-color: color.adjust($accent-blue, $lightness: -10%);
       transform: translateY(-2px);
     }
   }

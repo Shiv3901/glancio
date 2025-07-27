@@ -13,7 +13,7 @@
         .demo-container {
             padding: 120px 0 80px;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
         }
         
         .demo-content {
@@ -31,7 +31,7 @@
         
         .demo-description {
             font-size: 20px;
-            color: #cbd5e1;
+            color: #e2e8f0;
             margin-bottom: 40px;
             line-height: 1.6;
         }
@@ -47,9 +47,10 @@
         
         .google-form {
             width: 100%;
-            height: 600px;
+            height: 700px;
             border: none;
             border-radius: 8px;
+            background: #ffffff;
         }
         
         .back-button {
@@ -67,6 +68,16 @@
             color: #6366f1;
         }
         
+        .form-notice {
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+        
         @media (max-width: 768px) {
             .demo-title {
                 font-size: 32px;
@@ -81,7 +92,7 @@
             }
             
             .google-form {
-                height: 500px;
+                height: 600px;
             }
         }
     </style>
@@ -100,7 +111,6 @@
                     <a href="#about">About us</a>
                 </nav>
                 <div class="header-cta">
-                    <button class="btn btn-secondary">Get a demo</button>
                     <button class="btn btn-primary">Contact us</button>
                 </div>
             </div>
@@ -119,16 +129,13 @@
                     Fill out the form below and our team will schedule a personalized demo for your business.
                 </p>
                 
+                <div class="form-notice">
+                    📧 Demo requests will be sent to glancioau@gmail.com
+                </div>
+                
                 <div class="form-container">
-                    <!-- Replace this URL with your actual Google Form embed URL -->
-                    <iframe 
-                        class="google-form"
-                        src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                        Loading…
-                    </iframe>
+                    <!-- Google Form Embed - Replace YOUR_FORM_ID with actual form ID -->
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdH0y-gM0BtVX2kxIeZxhOyDdas5V5oFVm23LPP7d_Jd99gHA/viewform?embedded=true" width="640" height="1069" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </div>
@@ -173,12 +180,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2024 Glancio. All rights reserved.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="#" aria-label="Twitter">Twitter</a>
-                    <a href="#" aria-label="GitHub">GitHub</a>
+                    <p>&copy; 2025 Glancio. All rights reserved.</p>
                 </div>
             </div>
         </div>
