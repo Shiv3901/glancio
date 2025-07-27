@@ -30,21 +30,17 @@ export class HomePage {
                             transforming footage into always-on, AI-powered retail intelligence.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button class="btn btn-primary btn-large">Get enquiry</button>
-                            <button class="btn btn-secondary btn-large">View demo</button>
+                            <a href="/demo" class="btn btn-primary btn-large">Get enquiry</a>
                         </div>
                     </div>
                     <div class="mt-20">
                         <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                             <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
-                                <iframe 
-                                    class="w-full h-full rounded-xl"
-                                    src="https://www.youtube.com/embed/YMHt_FxReqw" 
-                                    title="Glancio Demo Video"
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe>
+                                <div class="text-center">
+                                    <div class="text-6xl mb-4">🎥</div>
+                                    <h3 class="text-xl font-semibold text-white mb-2">Demo Video</h3>
+                                    <p class="text-gray-300">Watch how Glancio transforms your retail analytics</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +115,7 @@ export class HomePage {
                                 </li>
                             </ul>
                             <div class="mt-8">
-                                <button class="btn btn-primary">View a demo</button>
+                                <a href="/demo" class="btn btn-primary">Get enquiry</a>
                             </div>
                         </div>
                     </div>
@@ -157,7 +153,7 @@ export class HomePage {
                                     <span>Get alerts when something's off — fast</span>
                                 </li>
                             </ul>
-                            <button class="btn btn-primary">View a demo</button>
+                            <a href="/demo" class="btn btn-primary">Get enquiry</a>
                         </div>
                         <div class="feature-visual">
                             <div class="protection-blob">
