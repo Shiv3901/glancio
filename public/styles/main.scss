@@ -525,6 +525,22 @@ body {
   }
 }
 
+.privacy-description {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.privacy-item-description {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-top: 8px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
 // Footer
 .footer {
   background-color: $primary-bg;

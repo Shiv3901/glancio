@@ -169,37 +169,24 @@ export class HomePage {
                 <div class="container">
                     <div class="privacy-content">
                         <div class="privacy-text">
-                            <h2 class="privacy-title">Privacy-First. Blurred by Default. Certified Secure.</h2>
+                            <h2 class="privacy-title">Built for business. Compliant by design.</h2>
+                            <p class="privacy-description">Glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.</p>
                             <div class="privacy-features">
                                 <div class="privacy-item">
-                                    <span>At Glancio, we track behaviour — not identities.</span>
+                                    <span class="privacy-icon">🛠️</span>
+                                    <span>Processed locally</span>
+                                    <p class="privacy-item-description">All camera footage is analysed securely on-site — no cloud uploads, no external servers.</p>
                                 </div>
                                 <div class="privacy-item">
-                                    <span class="privacy-icon">👤</span>
-                                    <span>Faces blurred by default, before footage ever leaves the store</span>
+                                    <span class="privacy-icon">🙈</span>
+                                    <span>Privacy-first architecture</span>
+                                    <p class="privacy-item-description">Face data is anonymised automatically before it's ever accessed.</p>
                                 </div>
                                 <div class="privacy-item">
-                                    <span class="privacy-icon">🚫</span>
-                                    <span>No PII. Ever.</span>
+                                    <span class="privacy-icon">📜</span>
+                                    <span>APP-compliant</span>
+                                    <p class="privacy-item-description">Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
                                 </div>
-                                <div class="privacy-item">
-                                    <span class="privacy-icon">✅</span>
-                                    <span>ISO 27001 certified</span>
-                                </div>
-                                <div class="privacy-item">
-                                    <span class="privacy-icon">🔒</span>
-                                    <span>No third-party data sharing</span>
-                                </div>
-                                <div class="privacy-item">
-                                    <span>Smart, secure analytics — with your customers' privacy at the core.</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="certification">
-                            <div class="cert-blob">
-                                <div class="cert-logo">GCC</div>
-                                <div class="cert-text">GLOBAL COMPLIANCE CERTIFICATION</div>
-                                <div class="iso-badge">ISO 27001 CERTIFIED</div>
                             </div>
                         </div>
                     </div>
