@@ -7,22 +7,30 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "build": "npm run build-css",
-    "build-css": "sass public/styles/main.scss public/styles/main.css --style compressed",
-    "watch-css": "sass public/styles/main.scss public/styles/main.css --watch"
+    "build-css": "tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/main.css --watch",
+    "build-css-prod": "tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/main.css --minify"
   },
-  "keywords": ["retail", "analytics", "ai", "camera", "intelligence"],
+  "keywords": [
+    "retail",
+    "analytics",
+    "ai",
+    "camera",
+    "intelligence"
+  ],
   "author": "Glancio",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
     "compression": "^1.7.4",
+    "express": "^4.18.2",
     "helmet": "^7.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
     "nodemon": "^3.0.2",
-    "sass": "^1.69.5"
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
   },
   "engines": {
     "node": ">=18.0.0"
   }
-} 
+}

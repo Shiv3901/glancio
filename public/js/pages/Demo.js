@@ -6,7 +6,9 @@ export class DemoPage {
     static render() {
         return `
             ${Header.render()}
-            ${this.getDemoSection()}
+            <main class="main-content">
+                ${this.getDemoSection()}
+            </main>
             ${Footer.render()}
         `;
     }

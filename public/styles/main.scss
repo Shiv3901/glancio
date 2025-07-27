@@ -56,10 +56,28 @@ body {
   color: $text-white;
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   @include container;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; /* Account for fixed header */
+  min-height: calc(100vh - 80px); /* Full height minus header */
 }
 
 // Header
@@ -456,10 +474,9 @@ body {
   background-color: $primary-bg;
 
   .privacy-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .privacy-title {
@@ -467,21 +484,46 @@ body {
     font-weight: 700;
     margin-bottom: 40px;
     line-height: 1.2;
+    color: $text-white;
+  }
+
+  .privacy-description {
+    font-size: 1.2rem;
+    color: $text-muted;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .privacy-features {
     .privacy-item {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-      font-size: 18px;
-      line-height: 1.5;
+      margin-bottom: 40px;
+      text-align: center;
 
       .privacy-icon {
-        font-size: 20px;
+        font-size: 32px;
         color: $accent-cyan;
-        flex-shrink: 0;
+        margin-bottom: 16px;
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-white;
+        margin-bottom: 12px;
+      }
+
+      .privacy-item-description {
+        font-size: 1rem;
+        color: $text-muted;
+        line-height: 1.6;
+        max-width: 500px;
+        margin: 0 auto;
       }
     }
   }
@@ -525,27 +567,15 @@ body {
   }
 }
 
-.privacy-description {
-    font-size: 1.2rem;
-    color: #666666;
-    margin-bottom: 40px;
-    line-height: 1.6;
-    max-width: 600px;
-}
 
-.privacy-item-description {
-    font-size: 0.95rem;
-    color: #666666;
-    margin-top: 8px;
-    line-height: 1.5;
-    font-weight: 400;
-}
 
 // Footer
 .footer {
   background-color: $primary-bg;
   padding: 60px 0 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+  flex-shrink: 0;
 
   .footer-content {
     display: grid;
@@ -754,32 +784,34 @@ body {
 /* Product Page Styles */
 .product-container {
     background: #f5f5f5;
-    min-height: 100vh;
     padding: 80px 0;
+    color: #000000 !important;
 }
 
 .product-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    color: #000000 !important;
 }
 
 .product-hero {
     text-align: center;
     margin-bottom: 80px;
+    color: #000000 !important;
 }
 
 .product-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #000000;
+    color: #000000 !important;
     margin-bottom: 30px;
     line-height: 1.2;
 }
 
 .product-description {
     font-size: 1.5rem;
-    color: #000000;
+    color: #000000 !important;
     margin-bottom: 20px;
     line-height: 1.6;
     max-width: 800px;
@@ -789,7 +821,7 @@ body {
 
 .product-subtitle {
     font-size: 1.2rem;
-    color: #666666;
+    color: #666666 !important;
     line-height: 1.6;
     max-width: 700px;
     margin-left: auto;
@@ -798,6 +830,7 @@ body {
 
 .product-features {
     margin-bottom: 80px;
+    color: #000000 !important;
 }
 
 .product-feature {
@@ -806,29 +839,31 @@ body {
     padding: 40px;
     margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000000 !important;
 }
 
 .feature-header {
     margin-bottom: 25px;
+    color: #000000 !important;
 }
 
 .feature-header h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: #000000;
+    color: #000000 !important;
     margin-bottom: 10px;
 }
 
 .feature-header h3 {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #666666;
+    color: #666666 !important;
     margin-bottom: 0;
 }
 
 .feature-content p {
     font-size: 1.1rem;
-    color: #000000;
+    color: #000000 !important;
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -839,6 +874,7 @@ body {
 
 .product-cta {
     text-align: center;
+    color: #000000 !important;
 }
 
 .product-cta .btn {
@@ -902,5 +938,409 @@ body {
     
     .feature-description {
         font-size: 0.9rem;
+    }
+} 
+
+/* About Page Styles */
+.about-container {
+    background: #f5f5f5;
+    padding: 80px 0;
+    color: #000000 !important;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #000000 !important;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-description {
+    font-size: 1.5rem;
+    color: #000000 !important;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.about-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000000 !important;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-description {
+        font-size: 1.3rem;
+    }
+    
+    .about-section h2 {
+        font-size: 2rem;
+    }
+    
+    .about-section p {
+        font-size: 1rem;
+    }
+    
+    .about-section {
+        padding: 30px 20px;
+    }
+} 
+
+/* Contact Page Styles */
+.contact-container {
+    background: #f5f5f5;
+    padding: 80px 0;
+    color: #000000 !important;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #000000 !important;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: 1.5rem;
+    color: #000000 !important;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000000 !important;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.contact-section ul {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.contact-section li {
+    margin-bottom: 8px;
+    color: #000000 !important;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    color: #000000 !important;
+}
+
+.contact-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #000000 !important;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.contact-item a {
+    color: #145DA2 !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #1E88E5 !important;
+}
+
+.contact-form {
+    margin-top: 30px;
+    color: #000000 !important;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #000000 !important;
+    background: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #145DA2;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Demo Page Styles */
+.demo-container {
+    background: #f5f5f5;
+    padding: 80px 0;
+    color: #000000 !important;
+}
+
+.demo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #000000 !important;
+}
+
+.demo-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.demo-description {
+    font-size: 1.5rem;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-notice {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #000000 !important;
+    border: 2px solid #e9ecef;
+    display: inline-block;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.form-container iframe {
+    border-radius: 8px;
+    border: none;
+}
+
+/* Policy Container Styles (for Privacy and Terms pages) */
+.policy-container {
+    background: #f5f5f5;
+    padding: 80px 0;
+    color: #000000 !important;
+}
+
+.policy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #000000 !important;
+}
+
+.policy-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000 !important;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.policy-description {
+    font-size: 1.2rem;
+    color: #666666 !important;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.policy-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #000000 !important;
+}
+
+.policy-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 20px;
+}
+
+.policy-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000 !important;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.policy-section p {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.policy-section ul {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+    color: #000000 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-title,
+    .demo-title,
+    .policy-title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-description,
+    .demo-description {
+        font-size: 1.3rem;
+    }
+    
+    .contact-section h2,
+    .policy-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-section p,
+    .policy-section p {
+        font-size: 1rem;
+    }
+    
+    .contact-section,
+    .policy-section {
+        padding: 30px 20px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-container iframe {
+        width: 100%;
+        max-width: 100%;
     }
 } 

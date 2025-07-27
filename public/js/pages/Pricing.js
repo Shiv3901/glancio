@@ -6,7 +6,9 @@ export class PricingPage {
     static render() {
         return `
             ${Header.render()}
-            ${this.getPricingSection()}
+            <main class="main-content">
+                ${this.getPricingSection()}
+            </main>
             ${Footer.render()}
         `;
     }

@@ -6,7 +6,9 @@ export class FeaturesPage {
     static render() {
         return `
             ${Header.render()}
-            ${this.getFeaturesSection()}
+            <main class="main-content">
+                ${this.getFeaturesSection()}
+            </main>
             ${Footer.render()}
         `;
     }

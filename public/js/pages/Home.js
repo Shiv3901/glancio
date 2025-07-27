@@ -6,49 +6,46 @@ export class HomePage {
     static render() {
         return `
             ${Header.render()}
-            ${this.getHeroSection()}
-            ${this.getFeaturesSection()}
-            ${this.getPrivacySection()}
+            <main class="main-content">
+                ${this.getHeroSection()}
+                ${this.getFeaturesSection()}
+                ${this.getPrivacySection()}
+            </main>
             ${Footer.render()}
         `;
     }
 
     static getHeroSection() {
         return `
-            <section class="hero">
+            <section class="hero bg-primary-bg py-32">
                 <div class="container">
-                    <div class="hero-content">
-                        <h1 class="hero-title">Turn your cameras into AI agents for better retail performance</h1>
-                        <p class="hero-description">
-                            Your cameras see more when they work together. Glancio stitches together every customer journey across every camera — transforming footage into always-on, AI-powered retail intelligence. Lift conversions, reduce loss, and stay ahead — with eyes wide open.
+                    <div class="text-center max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                            Turn your cameras into 
+                            <span class="text-blue-400">AI agents</span> 
+                            for better retail performance
+                        </h1>
+                        <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+                            Glancio stitches together every customer journey across every camera — 
+                            transforming footage into always-on, AI-powered retail intelligence.
                         </p>
-                        <button class="btn btn-primary btn-large">Get an enquiry</button>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="dashboard-mockup">
-                        <div class="dashboard-content">
-                            <div class="video-feed">
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/YMHt_FxReqw" 
-                                        title="Glancio Demo Video" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                            <div class="analytics-panels">
-                                <div class="chart-panel"></div>
-                                <div class="data-panel"></div>
-                                <div class="metrics-panel"></div>
-                            </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button class="btn btn-primary btn-large">Get enquiry</button>
+                            <button class="btn btn-secondary btn-large">View demo</button>
                         </div>
-                        <div class="decorative-elements">
-                            <div class="star">⭐</div>
-                            <div class="arrow">→</div>
-                            <div class="sun">☀️</div>
+                    </div>
+                    <div class="mt-20">
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                            <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                                <iframe 
+                                    class="w-full h-full rounded-xl"
+                                    src="https://www.youtube.com/embed/YMHt_FxReqw" 
+                                    title="Glancio Demo Video"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,55 +55,72 @@ export class HomePage {
 
     static getFeaturesSection() {
         return `
-            <section class="features">
+            <section class="py-20 bg-gray-50">
                 <div class="container">
-                    <h2 class="section-title">Glancio helps physical retailers see what truly drives performance</h2>
-                    <p class="section-subtitle">Understand how people move, shop, and engage — then act on it.</p>
-                    <div class="features-grid">
-                        <div class="feature-visual">
-                            <div class="video-blob">
-                                <div class="video-placeholder-small">
-                                    <div class="decorative-elements-small">
-                                        <div class="star-small">⭐</div>
-                                        <div class="lightning">⚡</div>
-                                    </div>
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Glancio helps physical retailers see what truly drives performance
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Understand how people move, shop, and engage — then act on it.
+                        </p>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                                <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                                    <div class="text-6xl">📊</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="feature-content">
-                            <ul class="feature-list">
-                                <li>
-                                    <span class="feature-icon">🧍‍♂️</span>
-                                    <span>Shopper journey mapping</span>
-                                    <p class="feature-description">Visualise how customers move through your space across multiple cameras.</p>
+                        <div class="order-1 lg:order-2">
+                            <ul class="space-y-8">
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">🧍‍♂️</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Shopper journey mapping</h3>
+                                        <p class="text-gray-600">Visualise how customers move through your space across multiple cameras.</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="feature-icon">🔎</span>
-                                    <span>Customer segmentation</span>
-                                    <p class="feature-description">Break down foot traffic by age, gender, and ethnicity to understand who's visiting — and how they behave.</p>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">🔎</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Customer segmentation</h3>
+                                        <p class="text-gray-600">Break down foot traffic by age, gender, and ethnicity to understand who's visiting — and how they behave.</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="feature-icon">🔥</span>
-                                    <span>Heatmaps and dead zones</span>
-                                    <p class="feature-description">Pinpoint underperforming areas and layout friction with high-resolution visual overlays.</p>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">🔥</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Heatmaps and dead zones</h3>
+                                        <p class="text-gray-600">Pinpoint underperforming areas and layout friction with high-resolution visual overlays.</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="feature-icon">⚡</span>
-                                    <span>Live alerts, real action</span>
-                                    <p class="feature-description">Respond faster with real-time notifications when customer behaviour changes or key zones are triggered.</p>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">⚡</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Live alerts, real action</h3>
+                                        <p class="text-gray-600">Respond faster with real-time notifications when customer behaviour changes or key zones are triggered.</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="feature-icon">🧠</span>
-                                    <span>Multi-camera intelligence</span>
-                                    <p class="feature-description">Track individuals and groups across your network to get a complete picture of in-store behaviour.</p>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">🧠</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Multi-camera intelligence</h3>
+                                        <p class="text-gray-600">Track individuals and groups across your network to get a complete picture of in-store behaviour.</p>
+                                    </div>
                                 </li>
-                                <li>
-                                    <span class="feature-icon">🖥️</span>
-                                    <span>Simple, intuitive interface</span>
-                                    <p class="feature-description">Designed for retail teams — no technical background required.</p>
+                                <li class="flex items-start gap-4">
+                                    <span class="text-2xl">🖥️</span>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Simple, intuitive interface</h3>
+                                        <p class="text-gray-600">Designed for retail teams — no technical background required.</p>
+                                    </div>
                                 </li>
                             </ul>
-                            <button class="btn btn-primary">View a demo</button>
+                            <div class="mt-8">
+                                <button class="btn btn-primary">View a demo</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,28 +179,30 @@ export class HomePage {
 
     static getPrivacySection() {
         return `
-            <section class="privacy">
+            <section class="py-20 bg-primary-bg">
                 <div class="container">
-                    <div class="privacy-content">
-                        <div class="privacy-text">
-                            <h2 class="privacy-title">Built for business. Compliant by design.</h2>
-                            <p class="privacy-description">Glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.</p>
-                            <div class="privacy-features">
-                                <div class="privacy-item">
-                                    <span class="privacy-icon">🛠️</span>
-                                    <span>Processed locally</span>
-                                    <p class="privacy-item-description">All camera footage is analysed securely on-site — no cloud uploads, no external servers.</p>
-                                </div>
-                                <div class="privacy-item">
-                                    <span class="privacy-icon">🙈</span>
-                                    <span>Privacy-first architecture</span>
-                                    <p class="privacy-item-description">Face data is anonymised automatically before it's ever accessed.</p>
-                                </div>
-                                <div class="privacy-item">
-                                    <span class="privacy-icon">📜</span>
-                                    <span>APP-compliant</span>
-                                    <p class="privacy-item-description">Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
-                                </div>
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                            Built for business. Compliant by design.
+                        </h2>
+                        <p class="text-xl text-gray-300 mb-16">
+                            Glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <div class="text-4xl mb-4">🛠️</div>
+                                <h3 class="text-xl font-semibold text-white mb-3">Processed locally</h3>
+                                <p class="text-gray-300">All camera footage is analysed securely on-site — no cloud uploads, no external servers.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl mb-4">🙈</div>
+                                <h3 class="text-xl font-semibold text-white mb-3">Privacy-first architecture</h3>
+                                <p class="text-gray-300">Face data is anonymised automatically before it's ever accessed.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl mb-4">📜</div>
+                                <h3 class="text-xl font-semibold text-white mb-3">APP-compliant</h3>
+                                <p class="text-gray-300">Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
                             </div>
                         </div>
                     </div>
