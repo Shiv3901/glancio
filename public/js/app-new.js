@@ -5,8 +5,6 @@ import { ContactPage } from './pages/Contact.js';
 import { DemoPage } from './pages/Demo.js';
 import { PrivacyPage } from './pages/Privacy.js';
 import { TermsPage } from './pages/Terms.js';
-import { FeaturesPage } from './pages/Features.js';
-import { PricingPage } from './pages/Pricing.js';
 import { ProductPage } from './pages/Product.js';
 
 class GlancioApp {
@@ -24,8 +22,6 @@ class GlancioApp {
         if (path === '/demo') return 'demo';
         if (path === '/privacy') return 'privacy';
         if (path === '/terms') return 'terms';
-        if (path === '/features') return 'features';
-        if (path === '/pricing') return 'pricing';
         if (path === '/product') return 'product';
         return 'home';
     }
@@ -61,10 +57,6 @@ class GlancioApp {
                 return PrivacyPage.render();
             case 'terms':
                 return TermsPage.render();
-            case 'features':
-                return FeaturesPage.render();
-            case 'pricing':
-                return PricingPage.render();
             case 'product':
                 return ProductPage.render();
             default:
@@ -83,10 +75,6 @@ class GlancioApp {
                     this.navigateTo('/demo');
                 } else if (buttonText.includes('contact')) {
                     this.navigateTo('/contact');
-                } else if (buttonText.includes('features')) {
-                    this.navigateTo('/features');
-                } else if (buttonText.includes('pricing')) {
-                    this.navigateTo('/pricing');
                 } else if (buttonText.includes('about')) {
                     this.navigateTo('/about');
                 } else if (buttonText.includes('privacy')) {
