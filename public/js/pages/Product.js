@@ -98,8 +98,13 @@ export class ProductPage {
                                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                                     Built for retail. Backed by privacy.
                                 </h2>
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="bg-gray-50 rounded-lg p-4">
+                                        <img src="/images/app-logo.png" alt="Australian Privacy Principles Compliant" class="h-12 w-auto">
+                                    </div>
+                                </div>
                                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                                    Glancio is built with compliance and business practicality in mind. All footage is processed securely and locally, with no cloud uploads or third-party sharing.
+                                    Glancio is built with compliance and business practicality in mind. All footage is processed securely and locally, with no cloud uploads or third-party sharing. Our platform complies with Australia's Privacy Act and the Australian Privacy Principles (APPs).
                                 </p>
                             </div>
                         </div>

@@ -200,7 +200,9 @@ export class HomePage {
                                 <p class="text-gray-300">Face data is anonymised automatically before it's ever accessed.</p>
                             </div>
                             <div class="text-center">
-                                <div class="text-4xl mb-4">📜</div>
+                                <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                                    <img src="/images/app-logo.png" alt="Australian Privacy Principles Compliant" class="h-12 w-auto mx-auto">
+                                </div>
                                 <h3 class="text-xl font-semibold text-white mb-3">APP-compliant</h3>
                                 <p class="text-gray-300">Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
                             </div>

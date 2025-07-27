@@ -62,6 +62,18 @@ export class PrivacyPage {
                             </div>
 
                             <div>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">Australian Privacy Principles Compliance</h2>
+                                <div class="flex items-center justify-center mb-6">
+                                    <div class="bg-white rounded-lg p-4 shadow-lg">
+                                        <img src="/images/app-logo.png" alt="Australian Privacy Principles Compliant" class="h-16 w-auto">
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs). Our data handling practices comply with all 13 APPs, ensuring your customers' privacy is protected according to Australian law.
+                                </p>
+                            </div>
+
+                            <div>
                                 <h2 class="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
                                 <p class="text-gray-700 leading-relaxed mb-4">
                                     You have the right to:
