@@ -32,17 +32,6 @@ export class EnquiryPage {
                             </p>
                         </div>
 
-                        <!-- Notice Card -->
-                        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-6 mb-8 shadow-lg">
-                            <div class="flex items-center justify-center text-white">
-                                <div class="text-2xl mr-3">📧</div>
-                                <div>
-                                    <p class="font-semibold">Enquiry requests will be sent to</p>
-                                    <p class="text-blue-100">glancioau@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Form Container -->
                         <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
                             <div class="bg-gradient-to-r from-gray-50 to-gray-100 px-8 py-6 border-b border-gray-200">
