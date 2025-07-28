@@ -209,11 +209,15 @@ class glancioApp {
 }
 
 // Initialize the app when DOM is loaded
+let app;
 document.addEventListener('DOMContentLoaded', () => {
-    new glancioApp();
+    app = new glancioApp();
 });
 
 // Handle browser back/forward buttons
 window.addEventListener('popstate', () => {
-    window.location.reload();
+    if (app) {
+        app.currentPage = app.getCurrentPage();
+        app.loadPage();
+    }
 }); 
