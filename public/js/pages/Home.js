@@ -18,25 +18,25 @@ export class HomePage {
 
     static getHeroSection() {
         return `
-            <section class="hero bg-primary-bg py-16 md:py-32 px-4">
+            <section class="hero bg-white py-16 md:py-32 px-4">
                 <div class="container">
                     <div class="text-center max-w-4xl mx-auto">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 md:mb-6">
-                            Turn your cameras into AI agents for better retail <span class="text-blue-400">performance</span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 md:mb-6">
+                            Turn your cameras into AI agents for better retail <span class="text-blue-600">performance</span>
                         </h1>
-                        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-12 leading-relaxed px-4">
+                        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 md:mb-12 leading-relaxed px-4">
                             glancio stitches together every customer journey across every camera — 
                             transforming footage into always-on, AI-powered retail intelligence.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="/enquiry" class="btn btn-primary btn-large">Get enquiry</a>
+                            <a href="/enquiry" class="btn btn-primary btn-large">Enquire Now</a>
                         </div>
                     </div>
                     <div class="mt-20">
-                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                            <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                        <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                            <div class="aspect-video rounded-xl overflow-hidden">
                                 <iframe 
-                                    class="w-full h-full rounded-xl"
+                                    class="w-full h-full"
                                     src="https://www.youtube.com/embed/YMHt_FxReqw" 
                                     title="Glancio Demo Video"
                                     frameborder="0" 
@@ -341,7 +341,7 @@ export class HomePage {
                                 </li>
                             </ul>
                             <div class="mt-8 md:mt-10">
-                                <a href="/enquiry" class="btn btn-primary btn-large">Get enquiry</a>
+                                <a href="/enquiry" class="btn btn-primary btn-large">Enquire Now</a>
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@ export class HomePage {
                                     <span>Get alerts when something's off — fast</span>
                                 </li>
                             </ul>
-                            <a href="/enquiry" class="btn btn-primary">Get enquiry</a>
+                            <a href="/enquiry" class="btn btn-primary">Enquire Now</a>
                         </div>
                         <div class="feature-visual">
                             <div class="protection-blob">
@@ -487,7 +487,7 @@ export class HomePage {
                     </div>
 
                     <div class="text-center mt-16">
-                        <a href="/enquiry" class="btn btn-primary btn-large">Get enquiry</a>
+                        <a href="/enquiry" class="btn btn-primary btn-large">Enquire Now</a>
                     </div>
                 </div>
             </section>

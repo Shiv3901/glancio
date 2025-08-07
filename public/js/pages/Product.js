@@ -110,7 +110,7 @@ export class ProductPage {
                         </div>
 
                         <div class="text-center mt-16">
-                            <button class="btn btn-primary btn-large">Get an enquiry</button>
+                            <button class="btn btn-primary btn-large">Enquire Now</button>
                         </div>
                     </div>
                 </div>

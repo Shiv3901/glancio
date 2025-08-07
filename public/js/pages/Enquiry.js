@@ -24,7 +24,7 @@ export class EnquiryPage {
                                 <span class="text-2xl">📧</span>
                             </div>
                             <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
-                                Get Your Enquiry
+                                Enquire Now
                             </h1>
                             <p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                                 Leverage cutting-edge AI to monitor in-store activity, analyze customer behavior, and optimise product performance. 
@@ -35,7 +35,7 @@ export class EnquiryPage {
                         <!-- Form Container -->
                         <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
                             <div class="bg-gradient-to-r from-gray-50 to-gray-100 px-8 py-6 border-b border-gray-200">
-                                <h2 class="text-2xl font-bold text-gray-900 mb-2">Request Your Enquiry</h2>
+                                <h2 class="text-2xl font-bold text-gray-900 mb-2">Start Your Enquiry</h2>
                                 <p class="text-gray-600">Fill out the form below and we'll get back to you within 24 hours</p>
                             </div>
                             <div class="p-8">
