@@ -5,7 +5,6 @@ import { ContactPage } from './pages/Contact.js';
 import { EnquiryPage } from './pages/Enquiry.js';
 import { PrivacyPage } from './pages/Privacy.js';
 import { TermsPage } from './pages/Terms.js';
-import { ProductPage } from './pages/Product.js';
 
 class glancioApp {
     constructor() {
@@ -22,7 +21,7 @@ class glancioApp {
         if (path === '/enquiry') return 'enquiry';
         if (path === '/privacy') return 'privacy';
         if (path === '/terms') return 'terms';
-        if (path === '/product') return 'product';
+        if (path === '/product') return 'home'; // Redirect product page to home
         return 'home';
     }
 
@@ -57,8 +56,6 @@ class glancioApp {
                 return PrivacyPage.render();
             case 'terms':
                 return TermsPage.render();
-            case 'product':
-                return ProductPage.render();
             default:
                 return HomePage.render();
         }

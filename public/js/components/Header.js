@@ -7,7 +7,6 @@ export class Header {
                         <h1 class="text-2xl font-bold text-white">glancio</h1>
                     </div>
                     <nav class="flex gap-8">
-                        <a href="/product" class="text-white font-medium transition-colors duration-300 hover:text-blue-400">The Product</a>
                         <a href="/about" class="text-white font-medium transition-colors duration-300 hover:text-blue-400">About us</a>
                     </nav>
                     <div class="flex gap-4">

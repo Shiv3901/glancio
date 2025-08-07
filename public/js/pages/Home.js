@@ -9,6 +9,7 @@ export class HomePage {
             <main class="main-content">
                 ${this.getHeroSection()}
                 ${this.getFeaturesSection()}
+                ${this.getAboutSection()}
                 ${this.getPrivacySection()}
             </main>
             ${Footer.render()}
@@ -52,15 +53,82 @@ export class HomePage {
 
     static getFeaturesSection() {
         return `
-            <section class="py-16 md:py-20 bg-white px-4">
+            <section class="py-16 md:py-20 bg-gray-50 px-4">
                 <div class="container">
                     <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
-                            glancio helps physical retailers see what truly drives performance
+                            Your CCTV sees it all. glancio makes it actionable.
                         </h2>
-                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-                            Understand how people move, shop, and engage — then act on it.
+                        <p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed">
+                            glancio turns your existing camera network into a powerful behavioural insight engine — tracking real customer journeys, segmenting foot traffic, and revealing how your space actually performs.
                         </p>
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            From heatmaps to segmentation to live alerts, glancio helps you understand how people move, where they pause, and what drives engagement — without any extra hardware.
+                        </p>
+                    </div>
+
+                    <div class="space-y-20 mb-16">
+                        <!-- Multi-camera tracking section -->
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                                    Multi-camera tracking. Real-world insight.
+                                </h3>
+                                <p class="text-lg text-gray-600 mb-6">
+                                    See complete customer journeys across your store. With glancio's intelligent multi-camera stitching, shopper paths are automatically tracked and visualised — even as they move between camera zones.
+                                </p>
+                                <p class="text-gray-600">
+                                    Whether you're spotting a dead zone or evaluating layout changes, get a full view of how your space influences customer movement and behaviour.
+                                </p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                                <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
+                                    <div class="text-6xl">📹</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Customer segmentation section -->
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 lg:order-1">
+                                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                                    <div class="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center overflow-hidden">
+                                        <img src="/images/segment.png" alt="Customer segmentation analytics" class="w-full h-full object-contain rounded-xl">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                                    Segment the crowd. Understand your customer.
+                                </h3>
+                                <p class="text-lg text-gray-600 mb-6">
+                                    Go beyond traffic counts with real-time customer segmentation. Break down visitors by demographic attributes like age, gender, and ethnicity — then track how different segments interact with your space.
+                                </p>
+                                <p class="text-gray-600">
+                                    Analyse performance over time, zoom into specific zones, or compare stores side by side — all with clear, actionable data.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Heatmaps section -->
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                                    From foot traffic to floorplan fixes — fast.
+                                </h3>
+                                <p class="text-lg text-gray-600 mb-6">
+                                    Heatmaps and alerting that help you act. Identify underused areas, spot high-traffic choke points, and respond quickly to unusual movement patterns.
+                                </p>
+                                <p class="text-gray-600">
+                                    With built-in alerts and a simple interface, glancio turns complex behaviour data into store-friendly insights you can act on today.
+                                </p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                                <div class="aspect-video bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center">
+                                    <div class="text-6xl">🔥</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -331,40 +399,95 @@ export class HomePage {
         `;
     }
 
+    static getAboutSection() {
+        return `
+            <section class="py-16 md:py-20 bg-gray-50 px-4">
+                <div class="container">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            About us
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                            A multidisciplinary team building the future of physical retail
+                        </p>
+                        <p class="text-base text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+                            At Glancio, we bring together expertise in artificial intelligence, data science, software engineering, and commercial strategy to help retailers and property owners unlock deeper insights from their existing CCTV systems. With experience spanning consulting, climate AI, deep learning, and real-time analytics, our team is united by a shared mission: to make physical spaces smarter, more efficient, and more human-centred.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                            <div class="text-center">
+                                <img src="/images/harry.png" alt="Harry Bligh" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Harry Bligh</h3>
+                                <p class="text-gray-600 text-sm md:text-base">Go-To-Market</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="/images/shiv.png" alt="Shivam Savani" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Shivam Savani</h3>
+                                <p class="text-gray-600 text-sm md:text-base">Product & Design</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="/images/vik.png" alt="Vikhyat Sharma" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Vikhyat Sharma</h3>
+                                <p class="text-gray-600 text-sm md:text-base">Software Engineering</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="/images/declan.png" alt="Declan Curran" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 object-cover">
+                                <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">Declan Curran</h3>
+                                <p class="text-gray-600 text-sm md:text-base">AI & Machine Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+    }
+
     static getPrivacySection() {
         return `
-            <section class="py-16 md:py-20 bg-gray-900 text-white px-4">
+            <section class="py-16 md:py-20 bg-white px-4">
                 <div class="container">
-                    <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
-                            Privacy-first by design
+                    <!-- Privacy section from Product page -->
+                    <div class="text-center bg-gray-900 text-white rounded-2xl p-12 shadow-lg mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Built for retail. Backed by privacy.
                         </h2>
-                        <p class="text-lg md:text-xl text-gray-300 mb-12 md:mb-16">
-                            glancio is designed to meet the real-world needs of retailers, while respecting privacy at every step.
-                        </p>
-                    </div>
-                    <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
-                        <div>
-                            <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                        <div class="flex items-center justify-center mb-6">
+                            <div class="bg-white rounded-lg p-4">
                                 <div class="text-2xl font-bold text-blue-600">APP</div>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">APP-compliant</h3>
-                            <p class="text-gray-300">glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
+                        </div>
+                        <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                            glancio is built with compliance and business practicality in mind. All footage is processed securely and locally, with no cloud uploads or third-party sharing. Our platform complies with Australia's Privacy Act and the Australian Privacy Principles (APPs).
+                        </p>
+                    </div>
+
+                    <!-- Additional privacy details -->
+                    <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
+                        <div>
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4 inline-block">
+                                <div class="text-2xl font-bold text-blue-600">APP</div>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">APP-compliant</h3>
+                            <p class="text-gray-600">glancio is built in line with Australia's Privacy Act and the Australian Privacy Principles (APPs).</p>
                         </div>
                         <div>
-                            <div class="bg-white rounded-lg p-4 mb-4 inline-block">
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4 inline-block">
                                 <span class="text-4xl">🔒</span>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Secure & Local</h3>
-                            <p class="text-gray-300">All footage is processed securely and locally, with no cloud uploads or third-party sharing.</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Secure & Local</h3>
+                            <p class="text-gray-600">All footage is processed securely and locally, with no cloud uploads or third-party sharing.</p>
                         </div>
                         <div>
-                            <div class="bg-white rounded-lg p-4 mb-4 inline-block">
-                                <span class="text-4xl"> anonymised</span>
+                            <div class="bg-blue-50 rounded-lg p-4 mb-4 inline-block">
+                                <span class="text-4xl">👤</span>
                             </div>
-                            <h3 class="text-xl font-semibold text-white mb-3">Anonymised Data</h3>
-                            <p class="text-gray-300">Our AI operates on de-identified or pseudonymised data, delivering insights in aggregated form.</p>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3">Anonymised Data</h3>
+                            <p class="text-gray-600">Our AI operates on de-identified or pseudonymised data, delivering insights in aggregated form.</p>
                         </div>
+                    </div>
+
+                    <div class="text-center mt-16">
+                        <a href="/enquiry" class="btn btn-primary btn-large">Get enquiry</a>
                     </div>
                 </div>
             </section>
