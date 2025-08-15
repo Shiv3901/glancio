@@ -8,6 +8,7 @@ export class Header {
                     </div>
                     <nav class="flex gap-8">
                         <a href="/about" class="text-white font-medium transition-colors duration-300 hover:text-blue-400">About us</a>
+                        <a href="/dashboard" class="text-white font-medium transition-colors duration-300 hover:text-blue-400">Dashboard</a>
                     </nav>
                     <div class="flex gap-4">
                         <a href="/" class="btn btn-secondary">Home</a>
