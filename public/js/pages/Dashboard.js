@@ -9,6 +9,7 @@ export class DashboardPage {
             <main class="main-content bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
                 ${this.getDashboardHeader()}
                 ${this.getDashboardStats()}
+                ${this.getCameraFootage()}
                 ${this.getDashboardCharts()}
                 ${this.getRecentActivity()}
             </main>
@@ -20,11 +21,30 @@ export class DashboardPage {
         return `
             <section class="bg-white/80 backdrop-blur-md shadow-xl border-b border-gray-200/50 px-4 py-8">
                 <div class="container">
-                    <div class="text-center">
-                        <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4 justify-center">
-                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span>Live data • Updated ${new Date().toLocaleTimeString()}</span>
+                    <div class="flex items-start justify-between mb-8">
+                        <!-- Store Selector -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                                <span class="text-white text-lg">🏪</span>
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-600 block mb-1">Store Location</label>
+                                <select id="store-selector" class="bg-white border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm font-bold text-gray-900 focus:outline-none focus:border-blue-500 transition-colors shadow-sm min-w-[200px]">
+                                    <option value="demo">🏢 DEMO Store</option>
+                                    <option value="times-square">🗽 Times Square NYC</option>
+                                    <option value="dublin-street">🍀 Dublin Street</option>
+                                </select>
+                            </div>
                         </div>
+                        
+                        <!-- Live Status -->
+                        <div class="flex items-center space-x-2 text-sm text-gray-500 mt-8">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="font-medium">Live data • Updated ${new Date().toLocaleTimeString()}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
                         <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                             Real-time insights from your retail space powered by glancio's AI-driven camera analytics
                         </p>
@@ -51,10 +71,10 @@ export class DashboardPage {
                                     </span>
                                 </div>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">847</h3>
+                            <h3 id="visitors-today" class="text-3xl font-bold text-gray-900 mb-2">847</h3>
                             <p class="text-gray-600 font-medium">Today's Visitors</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Yesterday: <span class="font-medium text-gray-700">756</span></div>
+                                <div class="text-sm text-gray-500">Yesterday: <span id="visitors-yesterday" class="font-medium text-gray-700">756</span></div>
                             </div>
                         </div>
 
@@ -70,10 +90,10 @@ export class DashboardPage {
                                     </span>
                                 </div>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">3.4m</h3>
+                            <h3 id="dwell-time" class="text-3xl font-bold text-gray-900 mb-2">3.4m</h3>
                             <p class="text-gray-600 font-medium">Avg. Dwell Time</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Yesterday: <span class="font-medium text-gray-700">3.1m</span></div>
+                                <div class="text-sm text-gray-500">Yesterday: <span id="dwell-time-yesterday" class="font-medium text-gray-700">3.1m</span></div>
                             </div>
                         </div>
 
@@ -89,10 +109,10 @@ export class DashboardPage {
                                     </span>
                                 </div>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">24.3%</h3>
+                            <h3 id="conversion-rate" class="text-3xl font-bold text-gray-900 mb-2">24.3%</h3>
                             <p class="text-gray-600 font-medium">Conversion Rate</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Yesterday: <span class="font-medium text-gray-700">24.8%</span></div>
+                                <div class="text-sm text-gray-500">Yesterday: <span id="conversion-rate-yesterday" class="font-medium text-gray-700">24.8%</span></div>
                             </div>
                         </div>
 
@@ -106,10 +126,81 @@ export class DashboardPage {
                                     <span class="text-blue-700 text-sm font-semibold">2-4 PM</span>
                                 </div>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-2">183</h3>
+                            <h3 id="peak-traffic" class="text-3xl font-bold text-gray-900 mb-2">183</h3>
                             <p class="text-gray-600 font-medium">Peak Hour Traffic</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
-                                <div class="text-sm text-gray-500">Status: <span class="font-medium text-orange-600">High Activity</span></div>
+                                <div class="text-sm text-gray-500">Status: <span id="peak-status" class="font-medium text-orange-600">High Activity</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+    }
+
+    static getCameraFootage() {
+        return `
+            <section class="px-4 py-12">
+                <div class="container">
+                    <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-lg">📹</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Live Camera Footage</h3>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-red-50 px-3 py-1 rounded-full">
+                                <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                <span class="text-red-700 text-sm font-medium">LIVE</span>
+                            </div>
+                        </div>
+                        
+                        <div class="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
+                            <div class="aspect-video">
+                                <iframe id="camera-feed" class="w-full h-full" 
+                                        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&modestbranding=1" 
+                                        title="Store Camera Feed" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                            
+                            <!-- Camera overlay info -->
+                            <div class="absolute top-4 left-4 bg-black/70 text-white px-3 py-2 rounded-lg backdrop-blur-sm">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                    <span class="text-sm font-medium">Main Floor - Camera 1</span>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute top-4 right-4 bg-black/70 text-white px-3 py-2 rounded-lg backdrop-blur-sm">
+                                <div class="text-sm font-medium">${new Date().toLocaleTimeString()}</div>
+                            </div>
+                            
+                            <div class="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-2 rounded-lg backdrop-blur-sm">
+                                <div class="text-xs">Quality: 1080p • FPS: 30</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Camera controls -->
+                        <div class="flex items-center justify-between mt-6">
+                            <div class="flex items-center space-x-4">
+                                <button class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors text-sm font-medium">
+                                    📹 Camera 1
+                                </button>
+                                <button class="bg-gray-50 hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors text-sm">
+                                    📹 Camera 2
+                                </button>
+                                <button class="bg-gray-50 hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors text-sm">
+                                    📹 Camera 3
+                                </button>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm text-gray-600">
+                                <span>🎥 3 cameras active</span>
+                                <span>•</span>
+                                <span>📊 Recording analytics</span>
                             </div>
                         </div>
                     </div>
@@ -216,84 +307,8 @@ export class DashboardPage {
                             <!-- Zone Performance -->
                             <div class="pt-6 border-t border-gray-200">
                                 <h4 class="text-lg font-bold text-gray-900 mb-6">Zone Performance Today</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div class="bg-gradient-to-r from-red-50 to-red-100 p-4 rounded-xl border-l-4 border-red-500">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-red-800 font-bold text-sm">🚪 ENTRANCE</span>
-                                                <div class="text-red-600 text-xs mt-1">High Activity</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-red-600 text-lg">847</div>
-                                                <div class="text-red-500 text-xs">visitors</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl border-l-4 border-green-500">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-green-800 font-bold text-sm">💳 CHECKOUT</span>
-                                                <div class="text-green-600 text-xs mt-1">Converting Well</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-green-600 text-lg">206</div>
-                                                <div class="text-green-500 text-xs">purchases</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-500">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-orange-800 font-bold text-sm">🛍️ ZONE A</span>
-                                                <div class="text-orange-600 text-xs mt-1">Popular Products</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-orange-600 text-lg">623</div>
-                                                <div class="text-orange-500 text-xs">visitors</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 rounded-xl border-l-4 border-yellow-500">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-yellow-800 font-bold text-sm">🏷️ ZONE B</span>
-                                                <div class="text-yellow-600 text-xs mt-1">Needs Attention</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-yellow-600 text-lg">412</div>
-                                                <div class="text-yellow-500 text-xs">visitors</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-xl border-l-4 border-blue-500">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-blue-800 font-bold text-sm">👔 FITTING</span>
-                                                <div class="text-blue-600 text-xs mt-1">Light Usage</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-blue-600 text-lg">89</div>
-                                                <div class="text-blue-500 text-xs">uses</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-4 rounded-xl border-l-4 border-gray-400">
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <span class="text-gray-700 font-bold text-sm">🪑 SEATING</span>
-                                                <div class="text-gray-600 text-xs mt-1">Rest Area</div>
-                                            </div>
-                                            <div class="text-right">
-                                                <div class="font-bold text-gray-600 text-lg">34</div>
-                                                <div class="text-gray-500 text-xs">visitors</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div id="zone-performance" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <!-- Zone performance will be populated dynamically -->
                                 </div>
                             </div>
                         </div>
@@ -307,10 +322,10 @@ export class DashboardPage {
                                     </div>
                                     <h3 class="text-xl font-bold text-gray-900">Customer Demographics</h3>
                                 </div>
-                                <select class="bg-white border-2 border-gray-200 rounded-xl px-4 py-2 text-sm font-medium focus:outline-none focus:border-blue-500 transition-colors">
-                                    <option>Today</option>
-                                    <option>This Week</option>
-                                    <option>This Month</option>
+                                <select id="demographics-period" class="bg-white border-2 border-gray-200 rounded-xl px-4 py-2 text-sm font-medium focus:outline-none focus:border-blue-500 transition-colors">
+                                    <option value="today">Today</option>
+                                    <option value="week">This Week</option>
+                                    <option value="month">This Month</option>
                                 </select>
                             </div>
 
@@ -321,37 +336,37 @@ export class DashboardPage {
                                     <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-xl">
                                         <div class="flex items-center justify-between mb-2">
                                             <span class="font-medium text-gray-700">18-25 years</span>
-                                            <span class="font-bold text-blue-600">32%</span>
+                                            <span id="age-18-25" class="font-bold text-blue-600">32%</span>
                                         </div>
                                         <div class="w-full bg-white rounded-full h-3 shadow-inner">
-                                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full shadow-sm" style="width: 32%"></div>
+                                            <div id="age-18-25-bar" class="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full shadow-sm" style="width: 32%"></div>
                                         </div>
                                     </div>
                                     <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-xl">
                                         <div class="flex items-center justify-between mb-2">
                                             <span class="font-medium text-gray-700">26-35 years</span>
-                                            <span class="font-bold text-purple-600">28%</span>
+                                            <span id="age-26-35" class="font-bold text-purple-600">28%</span>
                                         </div>
                                         <div class="w-full bg-white rounded-full h-3 shadow-inner">
-                                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full shadow-sm" style="width: 28%"></div>
+                                            <div id="age-26-35-bar" class="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full shadow-sm" style="width: 28%"></div>
                                         </div>
                                     </div>
                                     <div class="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl">
                                         <div class="flex items-center justify-between mb-2">
                                             <span class="font-medium text-gray-700">36-45 years</span>
-                                            <span class="font-bold text-green-600">24%</span>
+                                            <span id="age-36-45" class="font-bold text-green-600">24%</span>
                                         </div>
                                         <div class="w-full bg-white rounded-full h-3 shadow-inner">
-                                            <div class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full shadow-sm" style="width: 24%"></div>
+                                            <div id="age-36-45-bar" class="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full shadow-sm" style="width: 24%"></div>
                                         </div>
                                     </div>
                                     <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl">
                                         <div class="flex items-center justify-between mb-2">
                                             <span class="font-medium text-gray-700">46+ years</span>
-                                            <span class="font-bold text-orange-600">16%</span>
+                                            <span id="age-46-plus" class="font-bold text-orange-600">16%</span>
                                         </div>
                                         <div class="w-full bg-white rounded-full h-3 shadow-inner">
-                                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full shadow-sm" style="width: 16%"></div>
+                                            <div id="age-46-plus-bar" class="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full shadow-sm" style="width: 16%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -362,11 +377,11 @@ export class DashboardPage {
                                 <h4 class="text-lg font-bold text-gray-900 mb-6">Gender Distribution</h4>
                                 <div class="grid grid-cols-2 gap-6">
                                     <div class="text-center bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl">
-                                        <div class="text-4xl font-bold text-pink-600 mb-2">58%</div>
+                                        <div id="gender-female" class="text-4xl font-bold text-pink-600 mb-2">58%</div>
                                         <div class="text-gray-700 font-medium">👩 Female</div>
                                     </div>
                                     <div class="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
-                                        <div class="text-4xl font-bold text-blue-600 mb-2">42%</div>
+                                        <div id="gender-male" class="text-4xl font-bold text-blue-600 mb-2">42%</div>
                                         <div class="text-gray-700 font-medium">👨 Male</div>
                                     </div>
                                 </div>
@@ -499,104 +514,143 @@ export class DashboardPage {
             <section class="px-4 pb-16">
                 <div class="container">
                     <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
-                        <div class="flex items-center justify-between mb-8">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                                    <span class="text-white text-lg">🔔</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900">Recent Activity & Alerts</h3>
+                        <div class="flex items-center space-x-3 mb-8">
+                            <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                                <span class="text-white text-lg">🔔</span>
                             </div>
-                            <button class="btn btn-secondary text-sm flex items-center space-x-2">
-                                <span>📄</span>
-                                <span>View All</span>
-                            </button>
+                            <h3 class="text-xl font-bold text-gray-900">Recent Activity & Alerts</h3>
                         </div>
                         
                         <div class="space-y-4">
                             <!-- Live Alert -->
-                            <div class="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-500 p-6 rounded-xl shadow-lg">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                                        <span class="text-white text-sm">⚠</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span class="font-bold text-red-900">High Traffic Alert - Product Zone A</span>
-                                            <span class="bg-red-200 text-red-800 px-2 py-1 rounded-full text-xs font-medium">2 min ago</span>
+                            <div class="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-500 rounded-xl shadow-lg transition-all duration-300" data-activity="alert1">
+                                <div class="p-6 cursor-pointer hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" data-toggle="alert1">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                                            <span class="text-white text-sm">⚠</span>
                                         </div>
-                                        <div class="text-sm text-red-700">
-                                            Unusual crowd density detected. Current: <span class="font-bold">45 people</span>, Normal: <span class="font-medium">15-25 people</span>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <span class="font-bold text-red-900">High Traffic Alert - Product Zone A</span>
+                                                <span class="bg-red-200 text-red-800 px-2 py-1 rounded-full text-xs font-medium">2 min ago</span>
+                                            </div>
+                                            <div class="text-sm text-red-700">
+                                                Unusual crowd density detected. Current: <span class="font-bold">45 people</span>, Normal: <span class="font-medium">15-25 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="text-gray-500 text-xs font-medium bg-gray-100 px-2 py-1 rounded-full">View Details</div>
+                                            <div id="alert1-chevron" class="text-gray-500 transform transition-transform duration-300">▼</div>
                                         </div>
                                     </div>
+                                </div>
+                                <div id="alert1-details" class="hidden border-t border-red-200 bg-red-25 p-6">
+                                    <!-- Details will be populated here -->
                                 </div>
                             </div>
 
                             <!-- Recent Activities -->
-                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-blue-200">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                                        <span class="text-white text-sm">🛍</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span class="font-bold text-blue-900">Customer Journey Completed</span>
-                                            <span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">5 min ago</span>
+                            <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl shadow-lg transition-all duration-300" data-activity="activity1">
+                                <div class="p-6 cursor-pointer hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" data-toggle="activity1">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                                            <span class="text-white text-sm">🛍</span>
                                         </div>
-                                        <div class="text-sm text-blue-700">
-                                            Female, 25-35 years, spent <span class="font-medium">4m 23s</span>, visited all zones
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <span class="font-bold text-blue-900">Customer Journey Completed</span>
+                                                <span class="bg-blue-200 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">5 min ago</span>
+                                            </div>
+                                            <div class="text-sm text-blue-700">
+                                                Female, 25-35 years, spent <span class="font-medium">4m 23s</span>, visited all zones
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-green-200">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                                        <span class="text-white text-sm">📈</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span class="font-bold text-green-900">Peak Hour Threshold Reached</span>
-                                            <span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">12 min ago</span>
-                                        </div>
-                                        <div class="text-sm text-green-700">
-                                            Traffic exceeded <span class="font-medium">150 visitors/hour</span>. Consider additional staff.
+                                        <div class="flex items-center space-x-2">
+                                            <div class="text-gray-500 text-xs font-medium bg-gray-100 px-2 py-1 rounded-full">View Details</div>
+                                            <div id="activity1-chevron" class="text-gray-500 transform transition-transform duration-300">▼</div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-purple-200">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center shadow-lg">
-                                        <span class="text-white text-sm">📄</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span class="font-bold text-purple-900">Weekly Report Generated</span>
-                                            <span class="bg-purple-200 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">1 hour ago</span>
-                                        </div>
-                                        <div class="text-sm text-purple-700">
-                                            Week of Dec 9-15: <span class="font-medium">8.2% increase</span> in foot traffic
-                                        </div>
-                                    </div>
+                                <div id="activity1-details" class="hidden border-t border-blue-200 bg-blue-25 p-6">
+                                    <!-- Details will be populated here -->
                                 </div>
                             </div>
 
-                            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-yellow-200">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
-                                        <span class="text-white text-sm">📹</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <div class="flex items-center justify-between mb-2">
-                                            <span class="font-bold text-yellow-900">Camera Calibration Needed</span>
-                                            <span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">3 hours ago</span>
+                            <div class="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-xl shadow-lg transition-all duration-300" data-activity="activity2">
+                                <div class="p-6 cursor-pointer hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" data-toggle="activity2">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                                            <span class="text-white text-sm">📈</span>
                                         </div>
-                                        <div class="text-sm text-yellow-700">
-                                            Camera 4 (Product Zone B) may need recalibration for optimal tracking
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <span class="font-bold text-green-900">Peak Hour Threshold Reached</span>
+                                                <span class="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">12 min ago</span>
+                                            </div>
+                                            <div class="text-sm text-green-700">
+                                                Traffic exceeded <span class="font-medium">150 visitors/hour</span>. Consider additional staff.
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="text-gray-500 text-xs font-medium bg-gray-100 px-2 py-1 rounded-full">View Details</div>
+                                            <div id="activity2-chevron" class="text-gray-500 transform transition-transform duration-300">▼</div>
                                         </div>
                                     </div>
+                                </div>
+                                <div id="activity2-details" class="hidden border-t border-green-200 bg-green-25 p-6">
+                                    <!-- Details will be populated here -->
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-purple-50 to-purple-100 border border-purple-200 rounded-xl shadow-lg transition-all duration-300" data-activity="activity3">
+                                <div class="p-6 cursor-pointer hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" data-toggle="activity3">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                                            <span class="text-white text-sm">📄</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <span class="font-bold text-purple-900">Weekly Report Generated</span>
+                                                <span class="bg-purple-200 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">1 hour ago</span>
+                                            </div>
+                                            <div class="text-sm text-purple-700">
+                                                Week of Dec 9-15: <span class="font-medium">8.2% increase</span> in foot traffic
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="text-gray-500 text-xs font-medium bg-gray-100 px-2 py-1 rounded-full">View Details</div>
+                                            <div id="activity3-chevron" class="text-gray-500 transform transition-transform duration-300">▼</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="activity3-details" class="hidden border-t border-purple-200 bg-purple-25 p-6">
+                                    <!-- Details will be populated here -->
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-200 rounded-xl shadow-lg transition-all duration-300" data-activity="activity4">
+                                <div class="p-6 cursor-pointer hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" data-toggle="activity4">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                                            <span class="text-white text-sm">📹</span>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <span class="font-bold text-yellow-900">Camera Calibration Needed</span>
+                                                <span class="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">3 hours ago</span>
+                                            </div>
+                                            <div class="text-sm text-yellow-700">
+                                                Camera 4 (Product Zone B) may need recalibration for optimal tracking
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="text-gray-500 text-xs font-medium bg-gray-100 px-2 py-1 rounded-full">View Details</div>
+                                            <div id="activity4-chevron" class="text-gray-500 transform transition-transform duration-300">▼</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="activity4-details" class="hidden border-t border-yellow-200 bg-yellow-25 p-6">
+                                    <!-- Details will be populated here -->
                                 </div>
                             </div>
                         </div>

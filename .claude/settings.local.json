@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run build-css-prod:*)"
+      "Bash(npm run build-css-prod:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }
