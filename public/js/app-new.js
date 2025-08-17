@@ -324,6 +324,61 @@ window.updateHeatmap = function(hour) {
             17: { entrance: 0.5, featured: 0.4, gallery: 0.5, checkout: 0.6, center: 0.4, consultation: 0.5, insight: "Evening browsers - Quality over quantity", visitors: 21 },
             18: { entrance: 0.3, featured: 0.2, gallery: 0.3, checkout: 0.4, center: 0.2, consultation: 0.3, insight: "Intimate evening shopping - Personal service", visitors: 12 },
             19: { entrance: 0.2, featured: 0.1, gallery: 0.2, checkout: 0.2, center: 0.1, consultation: 0.1, insight: "Closing soon - Final consultations", visitors: 6 }
+        },
+        'demo-retail': {
+            9: { entrance: 0.2, clothing: 0.15, footwear: 0.1, accessories: 0.1, checkout: 0.15, fitting: 0.05, insight: "Store opening - Early morning shoppers", visitors: 18 },
+            10: { entrance: 0.4, clothing: 0.3, footwear: 0.2, accessories: 0.15, checkout: 0.25, fitting: 0.1, insight: "Morning rush - Clothing section popular", visitors: 31 },
+            11: { entrance: 0.6, clothing: 0.5, footwear: 0.4, accessories: 0.3, checkout: 0.4, fitting: 0.2, insight: "Pre-lunch browsing - Good footwear interest", visitors: 45 },
+            12: { entrance: 0.7, clothing: 0.6, footwear: 0.5, accessories: 0.4, checkout: 0.5, fitting: 0.3, insight: "Lunch hour shopping - Active fitting rooms", visitors: 52 },
+            13: { entrance: 0.5, clothing: 0.4, footwear: 0.5, accessories: 0.4, checkout: 0.6, fitting: 0.4, insight: "Post-lunch conversions - Checkout busy", visitors: 48 },
+            14: { entrance: 0.8, clothing: 0.7, footwear: 0.6, accessories: 0.5, checkout: 0.7, fitting: 0.5, insight: "Afternoon peak - All sections active", visitors: 58 },
+            15: { entrance: 0.85, clothing: 0.8, footwear: 0.7, accessories: 0.6, checkout: 0.8, fitting: 0.6, insight: "Peak shopping time - Strong conversions", visitors: 62 },
+            16: { entrance: 0.9, clothing: 0.85, footwear: 0.8, accessories: 0.7, checkout: 0.9, fitting: 0.7, insight: "Maximum capacity - Excellent performance", visitors: 67 },
+            17: { entrance: 0.7, clothing: 0.6, footwear: 0.7, accessories: 0.6, checkout: 0.8, fitting: 0.5, insight: "Evening shoppers - Footwear zone busy", visitors: 55 },
+            18: { entrance: 0.5, clothing: 0.4, footwear: 0.5, accessories: 0.4, checkout: 0.6, fitting: 0.3, insight: "Evening wind-down - Final purchases", visitors: 38 },
+            19: { entrance: 0.3, clothing: 0.2, footwear: 0.3, accessories: 0.2, checkout: 0.4, fitting: 0.1, insight: "Pre-closing - Last minute decisions", visitors: 22 }
+        },
+        'demo-hospitality': {
+            11: { entrance: 0.2, dining: 0.1, bar: 0.05, entertainment: 0.0, restroom: 0.1, reception: 0.2, insight: "Late morning setup - Early arrivals", visitors: 8 },
+            12: { entrance: 0.6, dining: 0.7, bar: 0.2, entertainment: 0.1, restroom: 0.3, reception: 0.4, insight: "Lunch service peak - Dining area busy", visitors: 28 },
+            13: { entrance: 0.4, dining: 0.8, bar: 0.3, entertainment: 0.2, restroom: 0.4, reception: 0.3, insight: "Extended lunch - High dining occupancy", visitors: 35 },
+            14: { entrance: 0.3, dining: 0.6, bar: 0.4, entertainment: 0.3, restroom: 0.3, reception: 0.2, insight: "Afternoon socializing - Bar activity increases", visitors: 32 },
+            15: { entrance: 0.5, dining: 0.4, bar: 0.6, entertainment: 0.4, restroom: 0.3, reception: 0.3, insight: "Happy hour approach - Bar lounge popular", visitors: 38 },
+            16: { entrance: 0.6, dining: 0.5, bar: 0.7, entertainment: 0.5, restroom: 0.4, reception: 0.4, insight: "Early evening - Entertainment zone active", visitors: 45 },
+            17: { entrance: 0.8, dining: 0.7, bar: 0.8, entertainment: 0.6, restroom: 0.5, reception: 0.5, insight: "Happy hour peak - All areas busy", visitors: 52 },
+            18: { entrance: 0.9, dining: 0.9, bar: 0.9, entertainment: 0.7, restroom: 0.6, reception: 0.6, insight: "Dinner service - Maximum occupancy", visitors: 58 },
+            19: { entrance: 0.7, dining: 0.8, bar: 0.85, entertainment: 0.8, restroom: 0.5, reception: 0.4, insight: "Evening entertainment - Live events peak", visitors: 55 },
+            20: { entrance: 0.5, dining: 0.6, bar: 0.7, entertainment: 0.9, restroom: 0.4, reception: 0.3, insight: "Late evening - Entertainment focus", visitors: 48 },
+            21: { entrance: 0.3, dining: 0.4, bar: 0.5, entertainment: 0.6, restroom: 0.3, reception: 0.2, insight: "Wind down - Late night socializing", visitors: 35 }
+        },
+        'demo-airport': {
+            6: { entrance: 0.4, gates: 0.3, shops: 0.1, food: 0.2, waiting: 0.4, baggage: 0.1, insight: "Early morning departures - First flights", visitors: 156 },
+            7: { entrance: 0.7, gates: 0.6, shops: 0.2, food: 0.4, waiting: 0.7, baggage: 0.2, insight: "Morning rush begins - Business travelers", visitors: 234 },
+            8: { entrance: 0.9, gates: 0.8, shops: 0.3, food: 0.6, waiting: 0.9, baggage: 0.3, insight: "Peak morning departures - All areas busy", visitors: 312 },
+            9: { entrance: 0.8, gates: 0.7, shops: 0.4, food: 0.7, waiting: 0.8, baggage: 0.4, insight: "Mid-morning activity - Food court busy", visitors: 298 },
+            10: { entrance: 0.6, gates: 0.5, shops: 0.5, food: 0.5, waiting: 0.6, baggage: 0.5, insight: "Steady flow - Shopping picks up", visitors: 267 },
+            11: { entrance: 0.7, gates: 0.6, shops: 0.6, food: 0.6, waiting: 0.7, baggage: 0.6, insight: "Pre-lunch increase - Duty free active", visitors: 289 },
+            12: { entrance: 0.8, gates: 0.7, shops: 0.7, food: 0.8, waiting: 0.8, baggage: 0.7, insight: "Lunch hour peak - Food court maximum", visitors: 334 },
+            13: { entrance: 0.9, gates: 0.8, shops: 0.8, food: 0.7, waiting: 0.9, baggage: 0.8, insight: "Afternoon departures - High traffic", visitors: 356 },
+            14: { entrance: 1.0, gates: 0.9, shops: 0.9, food: 0.6, waiting: 1.0, baggage: 0.9, insight: "Peak afternoon - Maximum capacity", visitors: 389 },
+            15: { entrance: 0.9, gates: 0.8, shops: 0.85, food: 0.5, waiting: 0.9, baggage: 0.8, insight: "Sustained activity - Shopping priority", visitors: 367 },
+            16: { entrance: 0.8, gates: 0.7, shops: 0.7, food: 0.6, waiting: 0.8, baggage: 0.7, insight: "Late afternoon - Steady departures", visitors: 323 },
+            17: { entrance: 0.7, gates: 0.6, shops: 0.6, food: 0.7, waiting: 0.7, baggage: 0.6, insight: "Evening flights - Food service up", visitors: 289 },
+            18: { entrance: 0.6, gates: 0.5, shops: 0.5, food: 0.6, waiting: 0.6, baggage: 0.8, insight: "Evening arrivals - Baggage claim busy", visitors: 256 },
+            19: { entrance: 0.5, gates: 0.4, shops: 0.4, food: 0.5, waiting: 0.5, baggage: 0.9, insight: "Late arrivals - Peak baggage collection", visitors: 234 }
+        },
+        'demo-shopping-centre': {
+            10: { entrance: 0.3, retail: 0.2, food: 0.1, cinema: 0.1, entertainment: 0.1, parking: 0.3, insight: "Centre opening - Early shoppers arrive", visitors: 89 },
+            11: { entrance: 0.5, retail: 0.4, food: 0.3, cinema: 0.2, entertainment: 0.2, parking: 0.5, insight: "Morning shopping - Retail stores active", visitors: 145 },
+            12: { entrance: 0.7, retail: 0.6, food: 0.7, cinema: 0.3, entertainment: 0.3, parking: 0.7, insight: "Lunch hour rush - Food court peak", visitors: 198 },
+            13: { entrance: 0.6, retail: 0.7, food: 0.8, cinema: 0.4, entertainment: 0.4, parking: 0.6, insight: "Post-lunch shopping - Retail priority", visitors: 234 },
+            14: { entrance: 0.8, retail: 0.8, food: 0.6, cinema: 0.6, entertainment: 0.5, parking: 0.8, insight: "Afternoon peak - Cinema shows start", visitors: 278 },
+            15: { entrance: 0.9, retail: 0.9, food: 0.5, cinema: 0.7, entertainment: 0.6, parking: 0.9, insight: "Weekend peak - All areas busy", visitors: 312 },
+            16: { entrance: 1.0, retail: 1.0, food: 0.6, cinema: 0.8, entertainment: 0.8, parking: 1.0, insight: "Maximum capacity - Entertainment zone hot", visitors: 345 },
+            17: { entrance: 0.9, retail: 0.8, food: 0.7, cinema: 0.9, entertainment: 0.9, parking: 0.9, insight: "Evening entertainment - Cinema prime time", visitors: 334 },
+            18: { entrance: 0.8, retail: 0.7, food: 0.8, cinema: 0.8, entertainment: 0.7, parking: 0.8, insight: "Dinner and movies - Food court busy", visitors: 298 },
+            19: { entrance: 0.6, retail: 0.5, food: 0.6, cinema: 0.7, entertainment: 0.6, parking: 0.6, insight: "Evening shows - Cinema focus", visitors: 245 },
+            20: { entrance: 0.4, retail: 0.3, food: 0.4, cinema: 0.6, entertainment: 0.5, parking: 0.4, insight: "Late evening - Movie night continues", visitors: 189 }
         }
     };
     
@@ -924,13 +979,13 @@ window.updateStoreData = function(storeId) {
         },
         'times-square': {
             stats: {
-                visitorsToday: 2847,
-                visitorsYesterday: 2634,
+                visitorsToday: 1247,
+                visitorsYesterday: 1184,
                 dwellTime: '2.8m',
                 dwellTimeYesterday: '2.9m',
-                conversionRate: '18.7%',
-                conversionRateYesterday: '19.2%',
-                peakTraffic: 428,
+                conversionRate: 'N/A',
+                conversionRateYesterday: 'N/A',
+                peakTraffic: 187,
                 peakStatus: 'Very High Activity',
                 peakStatusColor: 'text-red-600'
             },
@@ -945,8 +1000,8 @@ window.updateStoreData = function(storeId) {
                 visitorsYesterday: 398,
                 dwellTime: '4.2m',
                 dwellTimeYesterday: '4.1m',
-                conversionRate: '31.8%',
-                conversionRateYesterday: '30.4%',
+                conversionRate: 'N/A',
+                conversionRateYesterday: 'N/A',
                 peakTraffic: 89,
                 peakStatus: 'Moderate Activity',
                 peakStatusColor: 'text-green-600'
@@ -954,6 +1009,74 @@ window.updateStoreData = function(storeId) {
             demographics: {
                 ages: { '18-25': 22, '26-35': 35, '36-45': 28, '46-plus': 15 },
                 gender: { female: 64, male: 36 }
+            }
+        },
+        'demo-retail': {
+            stats: {
+                visitorsToday: 623,
+                visitorsYesterday: 587,
+                dwellTime: '2.9m',
+                dwellTimeYesterday: '2.7m',
+                conversionRate: '28.4%',
+                conversionRateYesterday: '26.8%',
+                peakTraffic: 142,
+                peakStatus: 'Good Activity',
+                peakStatusColor: 'text-blue-600'
+            },
+            demographics: {
+                ages: { '18-25': 38, '26-35': 31, '36-45': 21, '46-plus': 10 },
+                gender: { female: 61, male: 39 }
+            }
+        },
+        'demo-hospitality': {
+            stats: {
+                visitorsToday: 234,
+                visitorsYesterday: 198,
+                dwellTime: '52m',
+                dwellTimeYesterday: '48m',
+                conversionRate: '87.2%',
+                conversionRateYesterday: '84.6%',
+                peakTraffic: 67,
+                peakStatus: 'Optimal Capacity',
+                peakStatusColor: 'text-green-600'
+            },
+            demographics: {
+                ages: { '18-25': 28, '26-35': 42, '36-45': 22, '46-plus': 8 },
+                gender: { female: 54, male: 46 }
+            }
+        },
+        'demo-airport': {
+            stats: {
+                visitorsToday: 3247,
+                visitorsYesterday: 2987,
+                dwellTime: '18m',
+                dwellTimeYesterday: '16m',
+                conversionRate: '12.3%',
+                conversionRateYesterday: '11.8%',
+                peakTraffic: 567,
+                peakStatus: 'Peak Travel Hours',
+                peakStatusColor: 'text-orange-600'
+            },
+            demographics: {
+                ages: { '18-25': 35, '26-35': 28, '36-45': 24, '46-plus': 13 },
+                gender: { female: 49, male: 51 }
+            }
+        },
+        'demo-shopping-centre': {
+            stats: {
+                visitorsToday: 1842,
+                visitorsYesterday: 1623,
+                dwellTime: '42m',
+                dwellTimeYesterday: '38m',
+                conversionRate: '34.7%',
+                conversionRateYesterday: '32.1%',
+                peakTraffic: 278,
+                peakStatus: 'Busy Shopping Day',
+                peakStatusColor: 'text-purple-600'
+            },
+            demographics: {
+                ages: { '18-25': 33, '26-35': 29, '36-45': 26, '46-plus': 12 },
+                gender: { female: 58, male: 42 }
             }
         }
     };
@@ -971,6 +1094,10 @@ window.updateStoreData = function(storeId) {
     const peakTraffic = document.getElementById('peak-traffic');
     const peakStatus = document.getElementById('peak-status');
     
+    // Get benchmark elements
+    const conversionBenchmark = document.getElementById('conversion-benchmark');
+    const dwellTimeBenchmark = document.getElementById('dwell-time-benchmark');
+    
     if (visitorsToday) visitorsToday.textContent = data.stats.visitorsToday;
     if (visitorsYesterday) visitorsYesterday.textContent = data.stats.visitorsYesterday;
     if (dwellTime) dwellTime.textContent = data.stats.dwellTime;
@@ -981,6 +1108,63 @@ window.updateStoreData = function(storeId) {
     if (peakStatus) {
         peakStatus.textContent = data.stats.peakStatus;
         peakStatus.className = `font-medium ${data.stats.peakStatusColor}`;
+    }
+    
+    // Update benchmarks based on venue type
+    const benchmarkData = {
+        demo: {
+            conversionBenchmark: '↗ 8% above industry avg (22.5%)',
+            dwellTimeBenchmark: '↗ 13% above industry avg (3.0m)',
+            conversionClass: 'text-green-600',
+            dwellTimeClass: 'text-green-600'
+        },
+        'demo-retail': {
+            conversionBenchmark: '↗ 12% above retail avg (25.4%)',
+            dwellTimeBenchmark: '↗ 12% above retail avg (2.6m)',
+            conversionClass: 'text-green-600',
+            dwellTimeClass: 'text-green-600'
+        },
+        'demo-hospitality': {
+            conversionBenchmark: '↗ 6% above hospitality avg (82.1%)',
+            dwellTimeBenchmark: '↗ 8% above hospitality avg (48m)',
+            conversionClass: 'text-green-600',
+            dwellTimeClass: 'text-green-600'
+        },
+        'demo-airport': {
+            conversionBenchmark: '↗ 4% above airport avg (11.8%)',
+            dwellTimeBenchmark: '↗ 18% above airport avg (15m)',
+            conversionClass: 'text-green-600',
+            dwellTimeClass: 'text-green-600'
+        },
+        'demo-shopping-centre': {
+            conversionBenchmark: '↗ 8% above mall avg (32.1%)',
+            dwellTimeBenchmark: '↗ 11% above mall avg (38m)',
+            conversionClass: 'text-green-600',
+            dwellTimeClass: 'text-green-600'
+        },
+        'times-square': {
+            conversionBenchmark: 'Data anonymized for privacy',
+            dwellTimeBenchmark: '↘ 7% below tourist area avg (3.0m)',
+            conversionClass: 'text-gray-500',
+            dwellTimeClass: 'text-orange-600'
+        },
+        'dublin-street': {
+            conversionBenchmark: 'Data anonymized for privacy',
+            dwellTimeBenchmark: '↗ 40% above boutique avg (3.0m)',
+            conversionClass: 'text-gray-500',
+            dwellTimeClass: 'text-green-600'
+        }
+    };
+    
+    const benchmarks = benchmarkData[storeId] || benchmarkData.demo;
+    
+    if (conversionBenchmark) {
+        conversionBenchmark.textContent = benchmarks.conversionBenchmark;
+        conversionBenchmark.className = `text-xs ${benchmarks.conversionClass} mt-1`;
+    }
+    if (dwellTimeBenchmark) {
+        dwellTimeBenchmark.textContent = benchmarks.dwellTimeBenchmark;
+        dwellTimeBenchmark.className = `text-xs ${benchmarks.dwellTimeClass} mt-1`;
     }
     
     // Update demographics for current demographics period
@@ -1037,12 +1221,12 @@ window.updateStoreData = function(storeId) {
                 { icon: '🪑', name: 'SEATING', status: 'Rest Area', count: 34, unit: 'visitors', color: 'gray' }
             ],
             'times-square': [
-                { icon: '🚪', name: 'ENTRANCE', status: 'Very High Traffic', count: 2847, unit: 'visitors', color: 'red' },
-                { icon: '💳', name: 'CHECKOUT', status: 'Heavy Volume', count: 532, unit: 'purchases', color: 'green' },
-                { icon: '📱', name: 'ELECTRONICS', status: 'Tourist Hotspot', count: 1834, unit: 'visitors', color: 'blue' },
-                { icon: '👕', name: 'FASHION', status: 'High Conversion', count: 1623, unit: 'visitors', color: 'purple' },
-                { icon: '🏢', name: 'CENTER AISLE', status: 'Busy Transit', count: 2234, unit: 'passages', color: 'orange' },
-                { icon: '🛎️', name: 'CUSTOMER SERVICE', status: 'Peak Demand', count: 167, unit: 'requests', color: 'indigo' }
+                { icon: '🚪', name: 'ENTRANCE', status: 'Very High Traffic', count: 1247, unit: 'visitors', color: 'red' },
+                { icon: '💳', name: 'CHECKOUT', status: 'Heavy Volume', count: 234, unit: 'purchases', color: 'green' },
+                { icon: '📱', name: 'ELECTRONICS', status: 'Tourist Hotspot', count: 834, unit: 'visitors', color: 'blue' },
+                { icon: '👕', name: 'FASHION', status: 'High Conversion', count: 723, unit: 'visitors', color: 'purple' },
+                { icon: '🏢', name: 'CENTER AISLE', status: 'Busy Transit', count: 934, unit: 'passages', color: 'orange' },
+                { icon: '🛎️', name: 'CUSTOMER SERVICE', status: 'Peak Demand', count: 67, unit: 'requests', color: 'indigo' }
             ],
             'dublin-street': [
                 { icon: '🚪', name: 'ENTRANCE', status: 'Welcoming Flow', count: 453, unit: 'visitors', color: 'green' },
@@ -1051,6 +1235,38 @@ window.updateStoreData = function(storeId) {
                 { icon: '🖼️', name: 'GALLERY SHOWCASE', status: 'Engaging Displays', count: 267, unit: 'visitors', color: 'purple' },
                 { icon: '💎', name: 'CENTER DISPLAY', status: 'Quality Focus', count: 189, unit: 'interactions', color: 'blue' },
                 { icon: '🗣️', name: 'CONSULTATION', status: 'Personal Service', count: 67, unit: 'sessions', color: 'pink' }
+            ],
+            'demo-retail': [
+                { icon: '🚪', name: 'ENTRANCE', status: 'Steady Traffic', count: 623, unit: 'visitors', color: 'blue' },
+                { icon: '💳', name: 'CHECKOUT', status: 'Converting Well', count: 177, unit: 'purchases', color: 'green' },
+                { icon: '👕', name: 'CLOTHING SECTION', status: 'Popular Items', count: 423, unit: 'visitors', color: 'purple' },
+                { icon: '👟', name: 'FOOTWEAR ZONE', status: 'Moderate Interest', count: 287, unit: 'visitors', color: 'orange' },
+                { icon: '🎒', name: 'ACCESSORIES', status: 'Browsing Zone', count: 198, unit: 'visitors', color: 'yellow' },
+                { icon: '👔', name: 'FITTING ROOMS', status: 'Active Usage', count: 89, unit: 'uses', color: 'indigo' }
+            ],
+            'demo-hospitality': [
+                { icon: '🚪', name: 'ENTRANCE LOBBY', status: 'Welcoming Flow', count: 234, unit: 'guests', color: 'green' },
+                { icon: '🍽️', name: 'DINING AREA', status: 'Peak Seating', count: 156, unit: 'diners', color: 'orange' },
+                { icon: '🍷', name: 'BAR LOUNGE', status: 'Social Hub', count: 89, unit: 'patrons', color: 'purple' },
+                { icon: '🎵', name: 'ENTERTAINMENT ZONE', status: 'Engaging Events', count: 67, unit: 'participants', color: 'blue' },
+                { icon: '🚻', name: 'RESTROOM AREA', status: 'Steady Usage', count: 178, unit: 'visits', color: 'gray' },
+                { icon: '🏨', name: 'RECEPTION DESK', status: 'Service Ready', count: 234, unit: 'interactions', color: 'emerald' }
+            ],
+            'demo-airport': [
+                { icon: '🚪', name: 'MAIN ENTRANCE', status: 'Heavy Flow', count: 3247, unit: 'passengers', color: 'red' },
+                { icon: '✈️', name: 'DEPARTURE GATES', status: 'Active Boarding', count: 1834, unit: 'passengers', color: 'blue' },
+                { icon: '🛍️', name: 'DUTY FREE SHOPS', status: 'Tourist Shopping', count: 567, unit: 'shoppers', color: 'purple' },
+                { icon: '🍔', name: 'FOOD COURT', status: 'Meal Rush', count: 423, unit: 'diners', color: 'orange' },
+                { icon: '💺', name: 'WAITING AREAS', status: 'High Occupancy', count: 2134, unit: 'seated', color: 'yellow' },
+                { icon: '🛄', name: 'BAGGAGE CLAIM', status: 'Peak Collection', count: 1456, unit: 'collections', color: 'green' }
+            ],
+            'demo-shopping-centre': [
+                { icon: '🚪', name: 'MAIN ENTRANCE', status: 'Busy Weekend', count: 1842, unit: 'visitors', color: 'red' },
+                { icon: '🛍️', name: 'RETAIL STORES', status: 'Shopping Peak', count: 1234, unit: 'shoppers', color: 'purple' },
+                { icon: '🍔', name: 'FOOD COURT', status: 'Lunch Rush', count: 567, unit: 'diners', color: 'orange' },
+                { icon: '🎬', name: 'CINEMA COMPLEX', status: 'Show Times', count: 234, unit: 'moviegoers', color: 'blue' },
+                { icon: '🎮', name: 'ENTERTAINMENT ZONE', status: 'Family Fun', count: 189, unit: 'players', color: 'green' },
+                { icon: '🚗', name: 'PARKING GARAGE', status: '78% Capacity', count: 1567, unit: 'vehicles', color: 'gray' }
             ]
         };
         
@@ -1095,4 +1311,188 @@ window.updateStoreData = function(storeId) {
     // Update heatmap for new store
     const currentHour = 14; // Default hour for immediate update
     window.updateHeatmap(currentHour);
+    
+    // Update business insights
+    window.updateBusinessInsights(storeId);
+};
+
+// Global function for business insights updates
+window.updateBusinessInsights = function(storeId) {
+    const businessInsights = document.getElementById('business-insights');
+    if (!businessInsights) return;
+    
+    const insightsData = {
+        demo: [
+            {
+                type: 'optimization',
+                icon: '🛍️',
+                title: 'Milk Aisle Underperforming',
+                description: 'Dairy section shows 23% lower engagement than expected',
+                recommendation: 'Consider relocating promotional displays to increase visibility',
+                severity: 'medium'
+            },
+            {
+                type: 'opportunity',
+                icon: '🔄',
+                title: 'Product Swap Opportunity',
+                description: 'Replace slow-moving Premium Tea selection with Popular Coffee brands',
+                recommendation: 'Expected 15% revenue increase in beverage category',
+                severity: 'high'
+            },
+            {
+                type: 'benchmark',
+                icon: '📊',
+                title: 'Conversion Rate vs Competitors',
+                description: 'Your 24.3% conversion rate is 8% above industry average (22.5%)',
+                recommendation: 'Maintain current customer experience strategies',
+                severity: 'positive'
+            },
+            {
+                type: 'traffic',
+                icon: '⚠️',
+                title: 'Checkout Queue Optimization',
+                description: 'Peak hour wait times exceed optimal threshold by 45 seconds',
+                recommendation: 'Deploy additional staff during 2-4 PM rush',
+                severity: 'medium'
+            }
+        ],
+        'demo-retail': [
+            {
+                type: 'optimization',
+                icon: '👟',
+                title: 'Footwear Section Layout Issue',
+                description: 'Customer flow analysis shows navigation confusion near shoe displays',
+                recommendation: 'Reorganize pathways and add clearer signage',
+                severity: 'medium'
+            },
+            {
+                type: 'opportunity',
+                icon: '🎒',
+                title: 'Cross-sell Accessories',
+                description: 'Only 23% of clothing buyers visit accessories section',
+                recommendation: 'Place complementary accessories near fitting rooms',
+                severity: 'high'
+            },
+            {
+                type: 'benchmark',
+                icon: '📊',
+                title: 'Dwell Time Performance',
+                description: 'Your 2.9m average is 12% above retail industry standard (2.6m)',
+                recommendation: 'Excellent product engagement - maintain current displays',
+                severity: 'positive'
+            }
+        ],
+        'demo-hospitality': [
+            {
+                type: 'optimization',
+                icon: '🍽️',
+                title: 'Dining Area Table Turnover',
+                description: 'Table 12-16 section has 20% longer occupancy than optimal',
+                recommendation: 'Adjust service flow and consider table size reconfiguration',
+                severity: 'medium'
+            },
+            {
+                type: 'opportunity',
+                icon: '🍷',
+                title: 'Bar Lounge Expansion Potential',
+                description: 'Peak demand exceeds capacity by 15% on weekend evenings',
+                recommendation: 'Consider expanding bar seating or adding cocktail tables',
+                severity: 'high'
+            },
+            {
+                type: 'benchmark',
+                icon: '📊',
+                title: 'Guest Satisfaction vs Industry',
+                description: 'Your 87.2% satisfaction rate exceeds hospitality benchmark (82.1%)',
+                recommendation: 'Outstanding performance - consider premium service positioning',
+                severity: 'positive'
+            }
+        ],
+        'demo-airport': [
+            {
+                type: 'optimization',
+                icon: '🛄',
+                title: 'Baggage Claim Bottleneck',
+                description: 'Carousel 3 area experiences 30% higher congestion than others',
+                recommendation: 'Improve crowd flow with directional barriers and real-time updates',
+                severity: 'high'
+            },
+            {
+                type: 'opportunity',
+                icon: '🛍️',
+                title: 'Duty Free Revenue Optimization',
+                description: 'Passengers spend 40% less time shopping compared to similar airports',
+                recommendation: 'Relocate high-margin items near gate seating areas',
+                severity: 'medium'
+            },
+            {
+                type: 'benchmark',
+                icon: '📊',
+                title: 'Passenger Processing vs Peers',
+                description: 'Your 18m average transit time beats industry standard (22m) by 18%',
+                recommendation: 'Excellent efficiency - market as competitive advantage',
+                severity: 'positive'
+            }
+        ],
+        'demo-shopping-centre': [
+            {
+                type: 'optimization',
+                icon: '🚗',
+                title: 'Parking Garage Level 3 Underutilized',
+                description: 'Upper levels show 45% lower occupancy despite availability',
+                recommendation: 'Improve wayfinding and consider incentives for upper level parking',
+                severity: 'medium'
+            },
+            {
+                type: 'opportunity',
+                icon: '🎬',
+                title: 'Cinema Cross-promotion Gap',
+                description: 'Only 15% of moviegoers visit retail stores before/after shows',
+                recommendation: 'Create pre-show shopping promotions and post-movie dining deals',
+                severity: 'high'
+            },
+            {
+                type: 'benchmark',
+                icon: '📊',
+                title: 'Visitor Spend vs Mall Average',
+                description: 'Your $47 average spend exceeds regional mall benchmark ($41) by 15%',
+                recommendation: 'Strong performance - expand successful retail categories',
+                severity: 'positive'
+            }
+        ]
+    };
+    
+    // Get insights for current store, fallback to demo if not found
+    const insights = insightsData[storeId] || insightsData.demo;
+    
+    let insightsHTML = '';
+    insights.forEach(insight => {
+        const colorClasses = {
+            high: 'from-red-50 to-red-100 border-red-500 text-red-800 text-red-600',
+            medium: 'from-orange-50 to-orange-100 border-orange-500 text-orange-800 text-orange-600',
+            positive: 'from-green-50 to-green-100 border-green-500 text-green-800 text-green-600',
+            low: 'from-blue-50 to-blue-100 border-blue-500 text-blue-800 text-blue-600'
+        };
+        
+        const colors = colorClasses[insight.severity] || colorClasses.medium;
+        const colorParts = colors.split(' ');
+        
+        insightsHTML += `
+            <div class="bg-gradient-to-r ${colorParts[0]} ${colorParts[1]} p-6 rounded-xl border-l-4 ${colorParts[2]}">
+                <div class="flex items-start space-x-4">
+                    <div class="text-2xl">${insight.icon}</div>
+                    <div class="flex-1">
+                        <h4 class="font-bold ${colorParts[3]} mb-2">${insight.title}</h4>
+                        <p class="${colorParts[4]} text-sm mb-3">${insight.description}</p>
+                        <div class="bg-white/50 p-3 rounded-lg">
+                            <span class="font-medium ${colorParts[3]} text-xs">💡 RECOMMENDATION:</span>
+                            <p class="${colorParts[4]} text-sm mt-1">${insight.recommendation}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    businessInsights.innerHTML = insightsHTML;
 }; 

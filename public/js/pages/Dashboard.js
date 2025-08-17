@@ -30,11 +30,20 @@ export class DashboardPage {
                             <div>
                                 <label class="text-sm font-medium text-gray-600 block mb-1">Store Location</label>
                                 <select id="store-selector" class="bg-white border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm font-bold text-gray-900 focus:outline-none focus:border-blue-500 transition-colors shadow-sm min-w-[200px]">
-                                    <option value="demo">🏢 DEMO Store</option>
-                                    <option value="times-square">🗽 Times Square NYC</option>
-                                    <option value="dublin-street">🍀 Dublin Street</option>
+                                    <option value="demo">🏢 Demo Store</option>
+                                    <option value="demo-retail">🛍️ Demo Retail Store</option>
+                                    <option value="demo-hospitality">🏨 Demo Hospitality Venue</option>
+                                    <option value="demo-airport">✈️ Demo Airport</option>
+                                    <option value="demo-shopping-centre">🏬 Demo Shopping Centre</option>
+                                    <option value="times-square">🗽 Times Square NYC *</option>
+                                    <option value="dublin-street">🍀 Dublin Street *</option>
                                 </select>
                             </div>
+                        </div>
+                        
+                        <!-- Privacy Note -->
+                        <div class="mt-3 px-2">
+                            <p class="text-xs text-gray-500 italic">* Data anonymized for privacy protection</p>
                         </div>
                         
                         <!-- Live Status -->
@@ -94,6 +103,7 @@ export class DashboardPage {
                             <p class="text-gray-600 font-medium">Avg. Dwell Time</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
                                 <div class="text-sm text-gray-500">Yesterday: <span id="dwell-time-yesterday" class="font-medium text-gray-700">3.1m</span></div>
+                                <div id="dwell-time-benchmark" class="text-xs text-green-600 mt-1">↗ 13% above industry avg (3.0m)</div>
                             </div>
                         </div>
 
@@ -113,6 +123,7 @@ export class DashboardPage {
                             <p class="text-gray-600 font-medium">Conversion Rate</p>
                             <div class="mt-4 pt-4 border-t border-gray-100">
                                 <div class="text-sm text-gray-500">Yesterday: <span id="conversion-rate-yesterday" class="font-medium text-gray-700">24.8%</span></div>
+                                <div id="conversion-benchmark" class="text-xs text-green-600 mt-1">↗ 8% above industry avg (22.5%)</div>
                             </div>
                         </div>
 
@@ -501,6 +512,20 @@ export class DashboardPage {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Insights -->
+                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
+                            <div class="flex items-center space-x-3 mb-8">
+                                <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+                                    <span class="text-white text-lg">💡</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Business Insights</h3>
+                            </div>
+                            
+                            <div id="business-insights" class="space-y-6">
+                                <!-- Business insights will be populated dynamically based on venue type -->
                             </div>
                         </div>
                     </div>
