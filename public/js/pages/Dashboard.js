@@ -250,26 +250,11 @@ export class DashboardPage {
                                             ${this.generateThermalHeatmap()}
                                         </div>
                                         
-                                        <!-- Zone Overlay Labels -->
+                                        <!-- Zone Overlay Labels and UI Elements -->
                                         <div class="absolute inset-0 pointer-events-none">
-                                            <!-- Entrance Zone -->
-                                            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-2 py-1 rounded text-xs font-bold backdrop-blur-sm">
-                                                ENTRANCE
-                                            </div>
-                                            
-                                            <!-- Zone A -->
-                                            <div class="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-xs font-bold backdrop-blur-sm">
-                                                ZONE A
-                                            </div>
-                                            
-                                            <!-- Zone B -->
-                                            <div class="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-xs font-bold backdrop-blur-sm">
-                                                ZONE B
-                                            </div>
-                                            
-                                            <!-- Checkout -->
-                                            <div class="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-2 py-1 rounded text-xs font-bold backdrop-blur-sm">
-                                                CHECKOUT
+                                            <!-- Dynamic venue layout labels -->
+                                            <div id="venue-layout-labels">
+                                                <!-- Labels will be populated dynamically based on venue type -->
                                             </div>
                                             
                                             <!-- Live indicator -->

@@ -1315,6 +1315,9 @@ window.updateStoreData = function(storeId) {
     // Update business insights
     window.updateBusinessInsights(storeId);
     
+    // Update venue layout labels
+    window.updateVenueLayout(storeId);
+    
     // Show/hide customer journey section based on venue type
     const customerJourneySection = document.getElementById('customer-journey-section');
     if (customerJourneySection) {
@@ -1507,4 +1510,82 @@ window.updateBusinessInsights = function(storeId) {
     });
     
     businessInsights.innerHTML = insightsHTML;
+};
+
+// Global function for venue layout updates
+window.updateVenueLayout = function(storeId) {
+    const venueLayoutLabels = document.getElementById('venue-layout-labels');
+    if (!venueLayoutLabels) return;
+    
+    const layoutData = {
+        demo: [
+            { x: 50, y: 85, label: 'ENTRANCE', icon: '🚪' },
+            { x: 15, y: 20, label: 'PRODUCT ZONE A', icon: '🛍️' },
+            { x: 85, y: 20, label: 'PRODUCT ZONE B', icon: '🏷️' },
+            { x: 50, y: 10, label: 'CHECKOUT', icon: '💳' },
+            { x: 15, y: 70, label: 'FITTING ROOMS', icon: '👔' },
+            { x: 85, y: 70, label: 'SEATING AREA', icon: '🪑' }
+        ],
+        'demo-retail': [
+            { x: 50, y: 85, label: 'ENTRANCE', icon: '🚪' },
+            { x: 20, y: 30, label: 'CLOTHING SECTION', icon: '👕' },
+            { x: 50, y: 30, label: 'FOOTWEAR ZONE', icon: '👟' },
+            { x: 80, y: 30, label: 'ACCESSORIES', icon: '🎒' },
+            { x: 50, y: 10, label: 'CHECKOUT', icon: '💳' },
+            { x: 20, y: 70, label: 'FITTING ROOMS', icon: '👔' }
+        ],
+        'demo-hospitality': [
+            { x: 50, y: 85, label: 'ENTRANCE LOBBY', icon: '🚪' },
+            { x: 30, y: 40, label: 'DINING AREA', icon: '🍽️' },
+            { x: 70, y: 40, label: 'BAR LOUNGE', icon: '🍷' },
+            { x: 50, y: 15, label: 'ENTERTAINMENT ZONE', icon: '🎵' },
+            { x: 15, y: 15, label: 'RECEPTION', icon: '🏨' },
+            { x: 85, y: 75, label: 'RESTROOMS', icon: '🚻' }
+        ],
+        'demo-airport': [
+            { x: 50, y: 85, label: 'MAIN ENTRANCE', icon: '🚪' },
+            { x: 30, y: 15, label: 'DEPARTURE GATES', icon: '✈️' },
+            { x: 70, y: 15, label: 'DUTY FREE SHOPS', icon: '🛍️' },
+            { x: 50, y: 50, label: 'FOOD COURT', icon: '🍔' },
+            { x: 15, y: 60, label: 'WAITING AREAS', icon: '💺' },
+            { x: 85, y: 60, label: 'BAGGAGE CLAIM', icon: '🛄' }
+        ],
+        'demo-shopping-centre': [
+            { x: 50, y: 85, label: 'MAIN ENTRANCE', icon: '🚪' },
+            { x: 25, y: 30, label: 'RETAIL STORES', icon: '🛍️' },
+            { x: 75, y: 30, label: 'FOOD COURT', icon: '🍔' },
+            { x: 25, y: 60, label: 'CINEMA COMPLEX', icon: '🎬' },
+            { x: 75, y: 60, label: 'ENTERTAINMENT', icon: '🎮' },
+            { x: 50, y: 10, label: 'PARKING GARAGE', icon: '🚗' }
+        ],
+        'times-square': [
+            { x: 50, y: 85, label: 'ENTRANCE', icon: '🚪' },
+            { x: 25, y: 30, label: 'ELECTRONICS', icon: '📱' },
+            { x: 75, y: 30, label: 'FASHION', icon: '👕' },
+            { x: 50, y: 10, label: 'CHECKOUT', icon: '💳' },
+            { x: 85, y: 70, label: 'CUSTOMER SERVICE', icon: '🛎️' }
+        ],
+        'dublin-street': [
+            { x: 50, y: 85, label: 'ENTRANCE', icon: '🚪' },
+            { x: 25, y: 35, label: 'FEATURED COLLECTION', icon: '⭐' },
+            { x: 75, y: 35, label: 'GALLERY SHOWCASE', icon: '🖼️' },
+            { x: 50, y: 10, label: 'CHECKOUT', icon: '💳' },
+            { x: 85, y: 65, label: 'CONSULTATION', icon: '🗣️' }
+        ]
+    };
+    
+    const layout = layoutData[storeId] || layoutData.demo;
+    
+    let layoutHTML = '';
+    layout.forEach(zone => {
+        layoutHTML += `
+            <div class="absolute bg-black/80 text-white px-2 py-1 rounded text-xs font-bold backdrop-blur-sm flex items-center space-x-1 border border-white/20" 
+                 style="left: ${zone.x}%; top: ${zone.y}%; transform: translate(-50%, -50%); z-index: 10;">
+                <span>${zone.icon}</span>
+                <span>${zone.label}</span>
+            </div>
+        `;
+    });
+    
+    venueLayoutLabels.innerHTML = layoutHTML;
 }; 
