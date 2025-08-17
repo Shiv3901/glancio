@@ -1314,6 +1314,18 @@ window.updateStoreData = function(storeId) {
     
     // Update business insights
     window.updateBusinessInsights(storeId);
+    
+    // Show/hide customer journey section based on venue type
+    const customerJourneySection = document.getElementById('customer-journey-section');
+    if (customerJourneySection) {
+        // Only show customer journey for venues where shopping/browsing journey applies
+        const showJourneyForVenues = ['demo', 'demo-retail', 'demo-shopping-centre', 'dublin-street'];
+        if (showJourneyForVenues.includes(storeId)) {
+            customerJourneySection.style.display = 'block';
+        } else {
+            customerJourneySection.style.display = 'none';
+        }
+    }
 };
 
 // Global function for business insights updates

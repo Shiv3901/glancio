@@ -433,7 +433,7 @@ export class DashboardPage {
                         </div>
 
                         <!-- Customer Journey Insights -->
-                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
+                        <div id="customer-journey-section" class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
                             <div class="flex items-center space-x-3 mb-8">
                                 <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
                                     <span class="text-white text-lg">🛍</span>
@@ -514,19 +514,23 @@ export class DashboardPage {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <!-- Business Insights -->
-                        <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
-                            <div class="flex items-center space-x-3 mb-8">
-                                <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
-                                    <span class="text-white text-lg">💡</span>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900">Business Insights</h3>
+            <!-- Business Insights Section -->
+            <section class="px-4 pb-12">
+                <div class="container">
+                    <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-200/50 hover:shadow-2xl transition-all duration-300">
+                        <div class="flex items-center space-x-3 mb-8">
+                            <div class="w-10 h-10 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
+                                <span class="text-white text-lg">💡</span>
                             </div>
-                            
-                            <div id="business-insights" class="space-y-6">
-                                <!-- Business insights will be populated dynamically based on venue type -->
-                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Business Insights</h3>
+                        </div>
+                        
+                        <div id="business-insights" class="space-y-6">
+                            <!-- Business insights will be populated dynamically based on venue type -->
                         </div>
                     </div>
                 </div>
