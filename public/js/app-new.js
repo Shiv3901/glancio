@@ -1202,10 +1202,10 @@ window.updateStoreData = function(storeId) {
         demo: 'https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&modestbranding=1', // London street view
         'demo-retail': 'https://www.youtube.com/embed/YMHt_FxReqw?autoplay=1&mute=1&loop=1&playlist=YMHt_FxReqw&controls=0&showinfo=0&rel=0&modestbranding=1', // Shopping street
         'demo-hospitality': 'https://www.youtube.com/embed/2MsN8gpT6jY?autoplay=1&mute=1&loop=1&playlist=2MsN8gpT6jY&controls=0&showinfo=0&rel=0&modestbranding=1', // Restaurant ambience
-        'demo-airport': 'https://www.youtube.com/embed/34Na4j8AVgA?autoplay=1&mute=1&loop=1&playlist=34Na4j8AVgA&controls=0&showinfo=0&rel=0&modestbranding=1', // Airport terminal
+        'demo-airport': 'https://www.youtube.com/embed/06Qswh1ThnE?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // Airport live stream
         'demo-shopping-centre': 'https://www.youtube.com/embed/YMHt_FxReqw?autoplay=1&mute=1&loop=1&playlist=YMHt_FxReqw&controls=0&showinfo=0&rel=0&modestbranding=1', // Mall footage
-        'times-square': 'https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&modestbranding=1', // Times Square footage
-        'dublin-street': 'https://www.youtube.com/embed/2MsN8gpT6jY?autoplay=1&mute=1&loop=1&playlist=2MsN8gpT6jY&controls=0&showinfo=0&rel=0&modestbranding=1' // Dublin street
+        'times-square': 'https://www.youtube.com/embed/rnXIjl_Rzy4?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // Times Square live stream
+        'dublin-street': 'https://www.youtube.com/embed/u4UZ4UvZXrg?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1' // Dublin street live stream
     };
     
     if (cameraFeed && cameraFeeds[storeId]) {
