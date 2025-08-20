@@ -1199,9 +1199,13 @@ window.updateStoreData = function(storeId) {
     // Update camera feed
     const cameraFeed = document.getElementById('camera-feed');
     const cameraFeeds = {
-        demo: 'https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&modestbranding=1',
-        'times-square': 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&showinfo=0&rel=0&modestbranding=1',
-        'dublin-street': 'https://www.youtube.com/embed/L_jWHffIx5E?autoplay=1&mute=1&loop=1&playlist=L_jWHffIx5E&controls=0&showinfo=0&rel=0&modestbranding=1'
+        demo: 'https://www.youtube.com/embed/live/eJ7wFBSbQGc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: London Oxford Street
+        'demo-retail': 'https://www.youtube.com/embed/live/AdkFcokpmoU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: NYC 5th Avenue Shopping
+        'demo-hospitality': 'https://www.youtube.com/embed/live/lTOeQSBUKtA?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: Key West Duval Street
+        'demo-airport': 'https://www.youtube.com/embed/live/kqO7KS-jrwc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: LaGuardia Airport
+        'demo-shopping-centre': 'https://www.youtube.com/embed/live/DmwZSmrdho0?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: Abbey Road Studios (busy area)
+        'times-square': 'https://www.youtube.com/embed/live/AdUw5RdyZxI?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1', // EarthCam: Times Square 
+        'dublin-street': 'https://www.youtube.com/embed/live/dQw4w9WgXcQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1' // EarthCam: Temple Bar Dublin
     };
     
     if (cameraFeed && cameraFeeds[storeId]) {

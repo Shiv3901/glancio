@@ -170,8 +170,8 @@ export class DashboardPage {
                         <div class="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
                             <div class="aspect-video">
                                 <iframe id="camera-feed" class="w-full h-full" 
-                                        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1&loop=1&playlist=jfKfPfyJRdk&controls=0&showinfo=0&rel=0&modestbranding=1" 
-                                        title="Store Camera Feed" 
+                                        src="https://www.youtube.com/embed/live/eJ7wFBSbQGc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1" 
+                                        title="Live Camera Feed" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
